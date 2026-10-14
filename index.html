@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles.css">
+<script src="/assets/js/react.production.min.js"></script>
+<script src="/assets/js/react-dom.production.min.js"></script>
+<script src="/assets/js/dc-runtime.js"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Circlaris</title>
+<link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+
+</helmet>
+
+
+
+<header data-block="Header" style="position: sticky; top: 0; z-index: 10; background: var(--c-bg); border-bottom: 1px solid var(--c-line);">
+  <div style="max-width: var(--w-page); margin: 0 auto; height: var(--h-header); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-24);">
+    <a href="/" aria-label="Circlaris Startseite" style="display: flex; align-items: center; min-height: 44px; flex: none; color: var(--c-ink); text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" sc-camel-view-box="0 0 763.1 199.5" fill="currentColor" aria-hidden="true" focusable="false" style="display: block; height: var(--logo-nav-h); width: auto;"><path d="M192.6,119.9c-1,0-1.8,0-2.5,0c-10.1,0-20.1,0-30.2-0.1c-1,0-1.4,0.3-1.8,1.2c-5.5,13.3-14.3,24-26.9,31c-17.9,10-36.6,11.2-55.5,3c-12.6-5.5-21.8-14.8-28.1-26.9c-7.4-14.3-9.2-29.3-5.6-44.9c1.7-7.1,5-13.5,9.4-19.4c3.8-5.1,8.2-9.7,13.4-13.5c10.2-7.3,21.5-11.5,34-12c14.5-0.6,27.6,3.2,39.2,11.9c8.1,6,13.7,13.9,17.4,23.2c1.4,3.6,2.5,7.3,3.5,11c0.9,3.2-1.6,5.7-4.6,5c-1.7-0.4-2.6-1.7-2.9-3.4c-1.6-7.2-4.4-14-8.8-20c-8-10.8-18.8-17.2-31.9-19.4C94.2,43.8,79.2,48,66.6,59C52.2,71.6,46.2,87.7,49,106.7c1.8,12,6.6,22.7,15.5,31.2c13.8,13.3,30.2,17.9,48.8,13c14.3-3.8,25.4-12.3,33.4-24.7c2.2-3.4,3.8-7,4.9-10.8c0.6-2.1,2-3.1,4.2-3.1c10.8,0,21.5,0,32.3,0c2.9,0,5.8,0,8.7,0c2.4,0,4.4,1.8,4.1,4.2c-0.3,2.8-0.8,5.7-1.5,8.5c-3.2,12.7-9.2,24.1-17.1,34.5c-7.8,10.2-17.3,18.6-28.3,25.2c-10.9,6.5-22.6,10.7-35,12.9c-16.5,2.9-32.8,2.4-48.9-2.1c-17.9-5-32.6-14.9-44.4-29.2C14.8,153.3,7.1,138.6,3,122.1c-4.5-18.1-4-36,2.1-53.8C11,51.2,21.2,36.9,34.8,25C45,16.2,56.4,9.5,69.2,5.4c13.3-4.4,27-6.1,41-5c20.6,1.6,39,8.7,55,21.8c7.3,6,13.3,13.1,18.6,20.9c7.4,10.8,12.4,22.6,15.2,35.4c0.4,2,0.8,4,1.1,6c0.4,2.5-0.9,4.4-3,4.8c-2.3,0.4-4.2-0.9-4.7-3.4c-1.7-9-4.2-17.8-8.3-26c-8.5-17.3-20.4-31.5-37.6-40.9c-10.8-5.9-22.5-9.4-34.8-10.6C101,7.3,90.3,8,79.7,10.7C68.9,13.4,58.8,17.8,49.5,24C40.8,29.8,33,36.6,26.6,44.9C11.6,64.6,5,86.7,8.6,111.5c2.8,19,10.7,35.8,23.3,50.2c8.2,9.3,17.5,17.2,28.9,22.3c8.2,3.7,16.8,5.9,25.7,7.1c9.7,1.2,19.4,1,29-0.7c12.4-2.2,24.2-6.4,35-13.1c19.3-12,32.8-28.7,40-50.4C191.4,124.6,191.9,122.4,192.6,119.9z"></path><path d="M20.4,98.4c-0.3-17.9,5.3-33.8,16.4-47.8c8.8-11.1,19.6-19.5,32.7-25c8.1-3.4,16.5-5.3,25.2-6c11.3-1,22.5,0,33.3,3.5c16.9,5.5,30.1,15.6,39.6,30.7c5.9,9.3,9.6,19.5,11.7,30.3c0.3,1.4,0.4,2.8-0.7,3.9c-1,1.2-2.3,1.6-3.8,1.2c-1.6-0.4-2.6-1.5-2.9-3.1c-1.3-7.3-3.5-14.2-6.8-20.8c-8.9-17.8-22.6-29.9-41.8-35.5c-9.8-2.9-19.7-3.6-29.8-2.4c-6.8,0.8-13.4,2.2-19.8,4.9c-11.8,4.9-22,12.1-30.1,22.1c-4.2,5.2-7.9,10.7-10.4,16.9c-6.3,15.4-7.3,31.2-2.7,47.3c2.7,9.7,6.9,18.6,13.2,26.5c11.1,13.9,25.1,23.2,42.8,26.4c18.1,3.3,35.2,0.3,51.3-8.5c12.7-7,22-17.2,29.2-29.6c0.5-0.9,1-1.9,1.5-2.8c1.1-2,3.2-2.8,5.1-1.9c1.9,1,2.7,3.2,1.7,5.2c-2.3,4.6-4.9,8.9-8,13c-13.3,17.7-30.9,28.1-52.6,31.9c-15.3,2.7-30.3,1.4-44.8-4.3c-10.1-3.9-18.7-10.1-26.3-17.7c-13.1-13.1-20.5-28.9-22.9-47.2c-0.2-1.7-0.4-3.4-0.5-5.1C20.4,102.4,20.4,100.4,20.4,98.4z"></path><path d="M266.2,130.2c-5.3,0-10-1.2-14.2-3.6c-4.1-2.4-7.4-5.8-9.7-10c-2.3-4.2-3.5-9.1-3.5-14.7c0-5.5,1.2-10.4,3.5-14.7s5.6-7.6,9.7-10c4.1-2.4,8.8-3.6,14.1-3.6c3.8,0,7.2,0.7,10.5,2c3.2,1.3,6.1,3.2,8.5,5.6c2.4,2.4,4.3,5.1,5.6,8.2l-9.9,3.7c-0.9-1.9-2.1-3.6-3.5-5c-1.5-1.4-3.1-2.6-5-3.4c-1.9-0.8-3.9-1.2-6.1-1.2c-3.2,0-6,0.8-8.5,2.4c-2.5,1.6-4.4,3.8-5.8,6.5c-1.4,2.8-2.1,6-2.1,9.6c0,3.7,0.7,6.9,2.1,9.7c1.4,2.8,3.4,5,5.9,6.6c2.5,1.6,5.4,2.4,8.6,2.4c2.2,0,4.3-0.4,6.1-1.3c1.9-0.9,3.5-2,4.9-3.6c1.4-1.5,2.6-3.3,3.5-5.2l9.9,3.6c-1.3,3.2-3.2,6-5.6,8.4c-2.4,2.5-5.3,4.4-8.5,5.7C273.5,129.5,270,130.2,266.2,130.2z"></path><path d="M314.4,129.3V74.5h10.7v54.8H314.4z"></path><path d="M352.6,129.3V74.5H373c3.9,0,7.3,0.8,10.2,2.3c3,1.5,5.3,3.6,7,6.2c1.7,2.6,2.5,5.7,2.5,9.2c0,3.6-1,6.8-2.9,9.5c-1.9,2.7-4.5,4.8-7.6,6.2l12.7,21.4h-12.1l-11.2-19.4c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0h-6.2v19.4H352.6zM363.3,100.1h9.7c1.6,0,3.1-0.3,4.3-1c1.3-0.7,2.3-1.6,3.1-2.8c0.8-1.2,1.1-2.6,1.1-4.1c0-2.3-0.8-4.2-2.5-5.7c-1.7-1.5-3.9-2.2-6.5-2.2h-9.2V100.1z"></path><path d="M442.9,130.2c-5.3,0-10-1.2-14.2-3.6c-4.1-2.4-7.4-5.8-9.7-10c-2.3-4.2-3.5-9.1-3.5-14.7c0-5.5,1.2-10.4,3.5-14.7s5.6-7.6,9.7-10c4.1-2.4,8.8-3.6,14.1-3.6c3.8,0,7.2,0.7,10.5,2c3.2,1.3,6.1,3.2,8.5,5.6s4.3,5.1,5.6,8.2l-9.9,3.7c-0.9-1.9-2.1-3.6-3.5-5c-1.5-1.4-3.1-2.6-5-3.4c-1.9-0.8-3.9-1.2-6.1-1.2c-3.2,0-6,0.8-8.5,2.4c-2.5,1.6-4.4,3.8-5.8,6.5c-1.4,2.8-2.1,6-2.1,9.6c0,3.7,0.7,6.9,2.1,9.7c1.4,2.8,3.4,5,5.9,6.6c2.5,1.6,5.4,2.4,8.6,2.4c2.2,0,4.3-0.4,6.1-1.3c1.9-0.9,3.5-2,4.9-3.6c1.4-1.5,2.6-3.3,3.5-5.2l9.9,3.6c-1.3,3.2-3.2,6-5.6,8.4c-2.4,2.5-5.3,4.4-8.5,5.7C450.2,129.5,446.7,130.2,442.9,130.2z"></path><path d="M491.1,129.3V74.5h10.7v45h24.1v9.8H491.1z"></path><path d="M543.4,129.3L565,74.5h11.4l21.6,54.8h-11.3l-4.7-12h-22.5l-4.7,12H543.4zM563,107.8h15.5l-7.7-19.9L563,107.8z"></path><path d="M620.2,129.3V74.5h20.3c3.9,0,7.3,0.8,10.2,2.3c3,1.5,5.3,3.6,7,6.2c1.7,2.6,2.5,5.7,2.5,9.2c0,3.6-1,6.8-2.9,9.5c-1.9,2.7-4.5,4.8-7.6,6.2l12.7,21.4h-12.1l-11.2-19.4c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0h-6.2v19.4H620.2zM630.9,100.1h9.7c1.6,0,3.1-0.3,4.3-1c1.3-0.7,2.3-1.6,3.1-2.8c0.8-1.2,1.1-2.6,1.1-4.1c0-2.3-0.8-4.2-2.5-5.7c-1.7-1.5-3.9-2.2-6.5-2.2h-9.2V100.1z"></path><path d="M686.3,129.3V74.5H697v54.8H686.3z"></path><path d="M742.9,130.2c-2.8,0-5.3-0.3-7.7-1c-2.4-0.7-4.5-1.6-6.4-2.9c-1.9-1.2-3.4-2.6-4.7-4.1c-1.2-1.5-2-3.1-2.4-4.8l10.5-3.1c0.7,1.8,1.9,3.3,3.6,4.6c1.7,1.3,3.9,1.9,6.5,2c2.8,0.1,5-0.5,6.8-1.8c1.7-1.3,2.6-2.9,2.6-4.8c0-1.7-0.7-3.2-2.1-4.3c-1.4-1.2-3.3-2.1-5.7-2.7l-7.1-1.9c-2.7-0.7-5-1.7-7-3.1c-2-1.4-3.6-3.1-4.8-5.1c-1.1-2-1.7-4.4-1.7-7.1c0-5.2,1.7-9.2,5.1-12.1c3.4-2.9,8.3-4.3,14.5-4.3c3.5,0,6.6,0.5,9.2,1.5c2.6,1,4.8,2.5,6.6,4.3c1.8,1.9,3.1,4.1,4.1,6.6l-10.4,3.2c-0.6-1.8-1.8-3.3-3.4-4.5c-1.7-1.3-3.8-1.9-6.3-1.9c-2.6,0-4.7,0.6-6.1,1.8c-1.5,1.2-2.2,2.9-2.2,5.1c0,1.7,0.6,3.1,1.8,4.1c1.2,1,2.8,1.7,4.8,2.3l7.2,1.8c4.7,1.1,8.3,3.2,11,6.2s3.9,6.3,3.9,9.9c0,3.2-0.8,6.1-2.3,8.5s-3.8,4.3-6.8,5.7C750.8,129.5,747.2,130.2,742.9,130.2z"></path></svg></a>
+    <nav aria-label="Seitennavigation" style="display: var(--nav-display); gap: var(--sp-32); font-size: var(--fs-small); font-weight: var(--fw-medium);">
+      <a href="#ablauf" style="color: var(--c-ink-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-ink);">Ablauf</a>
+      <a href="#ergebnis" style="color: var(--c-ink-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-ink);">Vorteile</a>
+      <a href="#kunden" style="color: var(--c-ink-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-ink);">Kunden</a>
+      <a href="#wechsel" style="color: var(--c-ink-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-ink);">Wechsel</a>
+      <a href="#fragen" style="color: var(--c-ink-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-ink);">Fragen</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: var(--sp-24);">
+      <span style="display: flex; gap: var(--sp-8); font-size: var(--fs-small); font-weight: var(--fw-medium); color: var(--c-ink-2);"><a href="#" style="color: var(--c-ink); text-decoration: none;">DE</a><span>|</span><a href="#" style="color: var(--c-ink-2); text-decoration: none;" style-hover="color: var(--c-ink);">EN</a></span>
+      <a data-block="Button" href="/demo" style="display: var(--nav-display); text-align: center; background: var(--c-accent); color: var(--c-bg); border: 1px solid var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; transition: background var(--t-fade); padding: var(--sp-8) var(--sp-24);" style-hover="background: var(--c-accent-hover); color: var(--c-bg);">Demo buchen</a>
+      <button type="button" aria-label="Menü" aria-expanded="{{ menuExpanded }}" sc-camel-on-click="{{ toggleMenu }}" style="all: unset; display: var(--menu-display); cursor: pointer; width: var(--sp-48); height: var(--sp-48); align-items: center; justify-content: center; color: var(--c-ink);"><svg width="24" height="24" sc-camel-view-box="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h16"></path><path d="M3 11h16"></path><path d="M3 16h16"></path></svg></button>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav aria-label="Seitennavigation mobil" style="display: var(--menu-display); flex-direction: column; max-width: var(--w-page); margin: 0 auto; padding: var(--sp-8) 0 var(--sp-24); font-size: var(--fs-small); font-weight: var(--fw-medium);">
+      <a href="#ablauf" sc-camel-on-click="{{ closeMenu }}" style="color: var(--c-ink-2); text-decoration: none; padding: var(--sp-16) 0; border-bottom: 1px solid var(--c-line);" style-hover="color: var(--c-ink);">Ablauf</a>
+      <a href="#ergebnis" sc-camel-on-click="{{ closeMenu }}" style="color: var(--c-ink-2); text-decoration: none; padding: var(--sp-16) 0; border-bottom: 1px solid var(--c-line);" style-hover="color: var(--c-ink);">Vorteile</a>
+      <a href="#kunden" sc-camel-on-click="{{ closeMenu }}" style="color: var(--c-ink-2); text-decoration: none; padding: var(--sp-16) 0; border-bottom: 1px solid var(--c-line);" style-hover="color: var(--c-ink);">Kunden</a>
+      <a href="#wechsel" sc-camel-on-click="{{ closeMenu }}" style="color: var(--c-ink-2); text-decoration: none; padding: var(--sp-16) 0; border-bottom: 1px solid var(--c-line);" style-hover="color: var(--c-ink);">Wechsel</a>
+      <a href="#fragen" sc-camel-on-click="{{ closeMenu }}" style="color: var(--c-ink-2); text-decoration: none; padding: var(--sp-16) 0; border-bottom: 1px solid var(--c-line);" style-hover="color: var(--c-ink);">Fragen</a>
+      <a data-block="Button" href="/demo" sc-camel-on-click="{{ closeMenu }}" style="display: block; text-align: center; background: var(--c-accent); color: var(--c-bg); border: 1px solid var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; transition: background var(--t-fade); margin-top: var(--sp-24); padding: var(--sp-16) var(--sp-32);" style-hover="background: var(--c-accent-hover); color: var(--c-bg);">Demo buchen</a>
+    </nav>
+  </sc-if>
+</header>
+
+<main>
+<div style="max-width: var(--w-page); margin: 0 auto;">
+
+  <section data-block="Hero" data-screen-label="1 Hero" id="start" style="padding: var(--sp-section) 0 var(--sp-168);">
+    <div style="display: grid; grid-template-columns: var(--hero-cols); gap: var(--hero-gap); align-items: center;">
+      <div style="min-width: 0; display: var(--hero-text-disp);">
+        <h1 style="order: 1; min-width: 0; font-family: var(--font-serif); font-weight: var(--fw-regular); font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-head);"><em style="font-style: italic;">Papierloses</em> Ankaufen.<br> <em style="font-style: italic;">Schnelleres</em> Verkaufen.</h1>
+        <p style="color: var(--c-ink-2); font-size: var(--fs-lead); line-height: var(--lh-body); max-width: var(--measure-lead); text-wrap: pretty; order: 3; margin: var(--hero-sub-mt) 0 0;">Circlaris ist die Software für den Handel mit pre-owned Luxusuhren, Schmuck und Gold. Sie nimmt Ihnen ab, was zwischen Ankauf und Verkauf Zeit kostet. Seit 2022 erfolgreich bei Händlern im Einsatz.</p>
+        <div style="order: 4; display: flex; flex-direction: var(--hero-btn-dir); gap: var(--sp-12); margin-top: var(--hero-btn-mt);">
+          <a data-block="Button" href="/demo" style="display: inline-block; text-align: center; background: var(--c-accent); color: var(--c-bg); border: 1px solid var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; transition: background var(--t-fade); padding: var(--sp-16) var(--sp-32);" style-hover="background: var(--c-accent-hover); color: var(--c-bg);">Demo buchen</a>
+          <a data-block="Button" data-variant="ghost" href="#ablauf" style="display: inline-block; text-align: center; background: transparent; color: var(--c-accent); border: 1px solid var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; padding: var(--sp-16) var(--sp-32); transition: background var(--t-fade);" style-hover="background: var(--c-accent-tint); color: var(--c-accent);">So funktioniert es</a>
+        </div>
+      </div>
+      <div data-block="Screenshot" style="order: 2; margin-top: var(--hero-img-mt); min-width: 0; background: var(--c-fill); border: 1px solid var(--c-line); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; color: var(--c-ink-2); padding: var(--sp-24); aspect-ratio: var(--hero-ratio);"><svg aria-label="Bild" role="img" width="48" height="48" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="1.75"></circle><path d="M21 16l-5-5-9 9"></path></svg></div>
+    </div>
+  </section>
+
+</div>
+
+  <section data-block="Kundenlogos-Zeile" data-screen-label="1a Kundenlogos-Zeile" style="background: var(--c-ink); padding: var(--sp-80) 0 calc(var(--sp-80) + var(--sp-64));">
+    <div style="max-width: var(--w-page); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--sp-32);">
+    <span data-block="Eyebrow" style="font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-on-dark-2); text-align: center;">Ausgewählte Kunden</span>
+    <div data-block="Logo-Zeile" style="display: flex; flex-direction: var(--logo-row-dir); flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--logo-row-gap);">
+      <img data-block="Logo" src="/assets/logo-marks.webp" alt="Marks Uhren" style="display: block; height: var(--sp-48); width: auto;">
+      <img data-block="Logo" src="/assets/logo-mad4watches.webp" alt="Mad4Watches" style="display: block; height: var(--sp-32); width: auto;">
+      <img data-block="Logo" src="/assets/logo-spreckelsen.webp" alt="Juwelier von Spreckelsen" style="display: block; height: var(--sp-48); width: auto;">
+    </div>
+    </div>
+  </section>
+
+  <section data-block="Journey" data-screen-label="2 Journey" id="ablauf" style="position: relative; margin-top: calc(-1 * var(--sp-64)); background: var(--c-accent); color: var(--c-on-dark); border-radius: var(--r-section); padding: var(--journey-pad-top) 0 var(--sp-section);">
+    <div style="min-width: 0; max-width: var(--w-page); margin: 0 auto;">
+      <span data-block="Eyebrow" data-variant="dark" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-on-dark-2); margin-bottom: var(--sp-12);">Ablauf</span><h2 style="color: var(--c-on-dark); margin-bottom: 0; max-width: 32ch; text-wrap: balance;">So läuft eine gebrauchte Uhr durch Circlaris – Schritt für Schritt</h2>
+      <div data-block="Journey.Tabs" style="margin-top: var(--journey-tabs-mt);">
+        <div style="display: grid; grid-template-columns: var(--journey-cols); grid-template-rows: var(--journey-rows); gap: 0 var(--sp-64); align-items: start;">
+          <div style="min-width: 0; display: var(--journey-col-disp); grid-row: var(--jleft-row);">
+            <div data-block="Rail" data-variant="dark" ref="{{ railRef }}" style="order: var(--jo-rail); min-width: 0; margin: 0 var(--rail-mx); padding: 0 var(--rail-px); display: flex; flex-direction: var(--rail-dir); align-items: flex-start; gap: var(--rail-gap); overflow-x: var(--rail-overflow); overflow-y: hidden; scrollbar-width: none; border-bottom: var(--rail-line);">
+              <sc-for list="{{ stations }}" as="st" hint-placeholder-count="5"><button type="button" data-rail-item="" data-active="{{ st.active }}" sc-camel-on-click="{{ st.select }}" aria-current="{{ st.current }}" style-active="background: var(--rail-tap-bg);" style="all: unset; box-sizing: border-box; cursor: pointer; display: var(--rail-btn-disp); align-items: center; width: var(--rail-btn-w); min-height: var(--rail-btn-minh); border-radius: var(--rail-btn-r); white-space: nowrap; font-family: var(--font-sans); font-size: var(--fs-rail); font-weight: var(--fw-medium); line-height: var(--lh-rail); color: var(--c-on-dark); opacity: {{ st.op }}; padding: var(--rail-pad); transition: opacity var(--t-fade);" aria-label="{{ st.name }}"><span style="position: relative; display: inline-flex; align-items: baseline;"><span aria-hidden="true" style="flex: none; width: var(--rail-num-w); font-family: var(--font-sans); font-size: var(--fs-tag); font-weight: var(--fw-regular); letter-spacing: var(--ls-tag); font-variant-numeric: tabular-nums; color: {{ st.numColor }};">{{ st.num }}</span><span style="display: inline-grid;"><span style="grid-area: 1 / 1; font-weight: {{ st.fw }};">{{ st.name }}</span><span aria-hidden="true" style="grid-area: 1 / 1; font-weight: var(--fw-bold); visibility: hidden;">{{ st.name }}</span></span></span></button></sc-for>
+            </div>
+            <div data-block="Journey.Station" style="order: var(--jo-station); margin-top: var(--journey-station-mt); opacity: {{ fade }}; transition: opacity var(--t-fade);">
+              <p style="color: color-mix(in srgb, var(--c-bg) 90%, transparent); font-size: var(--jst-fs); line-height: var(--jst-lh); max-width: var(--measure-lead); margin: 0;">{{ cur.text }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: var(--chip-row-gap); margin-top: var(--sp-24);">
+                <sc-for list="{{ cur.chips }}" as="chip" hint-placeholder-count="3"><span data-block="Chip" data-variant="dark" style="display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-chip); line-height: 1.3; white-space: nowrap; color: var(--c-on-dark); background: var(--c-line-dark); border-radius: var(--r-pill); padding: 4px 11px;"><sc-if value="{{ chip.check }}" hint-placeholder-val="{{ true }}"><svg width="1em" height="1em" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-ok-on-dark)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;"><path d="M20 6 9 17l-5-5"></path></svg></sc-if><span>{{ chip.label }}</span></span></sc-for>
+              </div>
+            </div>
+          </div>
+<div style="order: var(--jo-visual); min-width: 0; margin-top: var(--journey-visual-mt); opacity: {{ colFade }}; transition: opacity var(--t-fade);">
+            <sc-if value="{{ hasVisual }}" hint-placeholder-val="{{ true }}">
+            <div data-block="Journey.Visual" ref="{{ visualRef }}" style="position: relative; width: 100%; max-width: var(--w-visual); margin-left: auto; container-type: inline-size;">
+              <div data-block="Journey.Foto" style="position: relative; width: var(--jfoto-w); margin-left: auto; aspect-ratio: var(--jfoto-ratio); border-radius: var(--r-lg); overflow: hidden; background: var(--c-fill);"><img src="/assets/station-ankauf.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--jfoto-pos); opacity: {{ card0.op }}; transition: opacity var(--t-fade);"><img src="/assets/station-service.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--jfoto-pos); opacity: {{ card1.op }}; transition: opacity var(--t-fade);"><img src="/assets/station-inventar.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--jfoto-pos); opacity: {{ card2.op }}; transition: opacity var(--t-fade);"><img src="/assets/station-vermarktung.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--jfoto-pos); opacity: {{ card3.op }}; transition: opacity var(--t-fade);"><img src="/assets/station-verkauf.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--jfoto-pos); opacity: {{ card4.op }}; transition: opacity var(--t-fade);"></div>
+              <button type="button" data-block="Journey.Pfeil" ref="{{ pfeilRef }}" sc-camel-on-click="{{ goNext }}" aria-label="{{ nextLabel }}" title="{{ nextLabel }}" style="position: absolute; z-index: 3; left: calc(69cqw + (31cqw - 56px) / 2); top: calc(55cqw - 28px); width: 56px; height: 56px; padding: 0; display: var(--journey-next-disp); align-items: center; justify-content: center; border-radius: 50%; background: var(--c-surface); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); color: var(--c-ink); cursor: pointer; transition: background var(--t-fade);" style-hover="background: var(--c-fill);" style-focus-visible="outline: 2px solid var(--c-ink); outline-offset: 3px;"><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+              <div data-block="Journey.Clip" style="position: relative; z-index: 1; margin: var(--jclip-mt) 0 0 var(--jm-ml); overflow-x: clip; overflow-y: visible;"><div data-block="UI-Ausschnitt.Journey" style="position: relative; width: var(--jm-w); margin-left: var(--jm-mx); margin-right: var(--jm-mx); color: var(--c-ink); display: grid; grid-template-columns: minmax(0, 1fr); align-items: start;">
+                <div data-card="0" style="grid-area: 1 / 1; align-self: start; min-width: 0; background: var(--c-surface); border-radius: var(--r-lg); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); opacity: {{ card0.mop }}; visibility: {{ card0.mvis }}; transition: {{ card0.mtr }};"><div data-card-body="" style="padding: var(--jm-pad); opacity: {{ intro0 }};"><div style="display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); margin-bottom: 6cqw;"><span style="display: flex; align-items: center; gap: 2cqw;"><svg sc-camel-view-box="0 0 20 20" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: 2.9cqw; height: 2.9cqw;"><path d="M3.5 10h12"></path><path d="M11 5.5L15.5 10L11 14.5"></path></svg><span style="font-size: max(var(--jm-fs-row), 3cqw); font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Ankauf</span></span><span data-block="Status-Pill" style="flex: 0 0 auto; font-size: max(var(--jm-fs-pill), 2.5cqw); font-weight: var(--fw-bold); line-height: 1.3; white-space: nowrap; color: var(--c-ok-text); background: var(--c-ok-tint); border-radius: var(--r-pill); padding: 0.5cqw 1.8cqw;">Abgeschlossen</span></div><div style="display: flex; align-items: center; gap: 4cqw; margin-bottom: 6cqw;"><div style="flex: 0 0 auto; margin-left: -0.6cqw; width: 11cqw; height: 11cqw; border-radius: 50%; overflow: hidden; background: var(--c-surface-accent-tint); display: flex; align-items: center; justify-content: center;"><img src="/assets/rolex-submariner.png" alt="Rolex Submariner Date" style="display: block; width: 75%; height: 75%; object-fit: contain;"></div><div style="min-width: 0;"><p style="margin: 0; font-size: max(var(--jm-fs-title), 3.3cqw); font-weight: var(--fw-bold); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--c-ink);">Rolex Submariner Date</p></div></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Deal</span><span style="flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Direktankauf</span></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Herkunftsprüfung</span><span style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 1.2cqw; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ok-text);"><svg sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: max(13px, 3cqw); height: max(13px, 3cqw);"><path d="M2.5 7.4l3 3L11.5 4"></path></svg>Unauffällig</span></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent; border-bottom: 1px solid transparent; margin-bottom: 6cqw;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Vertrag</span><span style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 1.2cqw; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ok-text);"><svg sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: max(13px, 3cqw); height: max(13px, 3cqw);"><path d="M2.5 7.4l3 3L11.5 4"></path></svg>Unterschrieben</span></div><div><span data-alabel="" style="display: block; font-size: max(13px, 2.7cqw); color: var(--c-surface-ink-2);">EK-Summe</span><strong data-big="" style="display: block; margin-top: 0.6cqw; font-size: max(32px, 7cqw); font-weight: var(--fw-bold); letter-spacing: var(--ls-head); line-height: 1; white-space: nowrap; color: var(--c-accent);">4.200 €</strong></div></div></div>
+                <div data-card="1" style="grid-area: 1 / 1; align-self: start; min-width: 0; background: var(--c-surface); border-radius: var(--r-lg); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); opacity: {{ card1.mop }}; visibility: {{ card1.mvis }}; transition: {{ card1.mtr }};"><div data-card-body="" style="padding: var(--jm-pad);"><div style="display: flex; align-items: center; gap: 2cqw; margin-bottom: 6cqw;"><svg sc-camel-view-box="0 0 20 20" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: 2.9cqw; height: 2.9cqw;"><path d="M3.5 10h12"></path><path d="M11 5.5L15.5 10L11 14.5"></path></svg><span style="font-size: max(var(--jm-fs-row), 3cqw); font-weight: var(--fw-bold); color: var(--c-ink);">Service</span></div><div style="display: flex; align-items: center; gap: 4cqw; margin-bottom: 6cqw;"><div style="flex: 0 0 auto; margin-left: -0.6cqw; width: 11cqw; height: 11cqw; border-radius: 50%; overflow: hidden; background: var(--c-surface-accent-tint); display: flex; align-items: center; justify-content: center;"><img src="/assets/rolex-submariner.png" alt="Rolex Submariner Date" style="display: block; width: 75%; height: 75%; object-fit: contain;"></div><div style="min-width: 0;"><p style="margin: 0; font-size: max(var(--jm-fs-title), 3.3cqw); font-weight: var(--fw-bold); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--c-ink);">Rolex Submariner Date</p></div></div><div data-block="Status-Balken" style="margin-bottom: 6cqw;"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1cqw;"><div data-seg="0" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-active); transform-origin: left center; transform: scaleX(0); opacity: 0; transition: opacity 200ms ease;"></div></div><div data-seg="1" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-active); transform-origin: left center; transform: scaleX(0); opacity: 0; transition: opacity 200ms ease;"></div></div><div data-seg="2" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-ok); transform-origin: left center; transform: scaleX(1); opacity: 1; transition: opacity 200ms ease;"></div></div></div><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1cqw; margin-top: 2cqw;"><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="0" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-regular); color: var(--c-surface-ink-2); background: transparent; transition: background-color 200ms ease, color 200ms ease;">Übergeben</span></p></div><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="1" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-regular); color: var(--c-surface-ink-2); background: transparent; transition: background-color 200ms ease, color 200ms ease;">In Service</span></p></div><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="2" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-bold); color: var(--c-ok-text); background: var(--c-ok-tint); transition: background-color 200ms ease, color 200ms ease;">Rückgabe</span></p></div></div></div><span data-alabel="" style="display: block; font-size: max(13px, 2.7cqw); color: var(--c-surface-ink-2);">Servicekosten</span><strong data-big="" style="display: block; margin-top: 0.6cqw; font-size: max(32px, 7cqw); font-weight: var(--fw-bold); letter-spacing: var(--ls-head); line-height: 1; white-space: nowrap; color: var(--c-accent);">240 €</strong></div></div>
+                <div data-card="2" style="grid-area: 1 / 1; align-self: start; min-width: 0; background: var(--c-surface); border-radius: var(--r-lg); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); opacity: {{ card2.mop }}; visibility: {{ card2.mvis }}; transition: {{ card2.mtr }};"><div data-card-body="" style="padding: var(--jm-pad);"><div style="display: flex; align-items: center; gap: 2cqw; margin-bottom: 6cqw;"><svg sc-camel-view-box="0 0 20 20" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: 2.9cqw; height: 2.9cqw;"><path d="M3.5 10h12"></path><path d="M11 5.5L15.5 10L11 14.5"></path></svg><span style="font-size: max(var(--jm-fs-row), 3cqw); font-weight: var(--fw-bold); color: var(--c-ink);">Artikel</span></div><div style="display: flex; align-items: center; gap: 4cqw; margin-bottom: 6cqw;"><div style="flex: 0 0 auto; margin-left: -0.6cqw; width: 11cqw; height: 11cqw; border-radius: 50%; overflow: hidden; background: var(--c-surface-accent-tint); display: flex; align-items: center; justify-content: center;"><img src="/assets/rolex-submariner.png" alt="Rolex Submariner Date" style="display: block; width: 75%; height: 75%; object-fit: contain;"></div><div style="min-width: 0;"><p style="margin: 0; font-size: max(var(--jm-fs-title), 3.3cqw); font-weight: var(--fw-bold); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--c-ink);">Rolex Submariner Date</p></div></div><div data-block="Status-Balken" style="margin-bottom: 6cqw;"><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1cqw;"><div data-seg="0" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-active); transform-origin: left center; transform: scaleX(0); opacity: 0; transition: opacity 200ms ease;"></div></div><div data-seg="1" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-active); transform-origin: left center; transform: scaleX(0); opacity: 0; transition: opacity 200ms ease;"></div></div><div data-seg="2" style="height: 1cqw; border-radius: var(--r-pill); background: var(--c-surface-line); overflow: hidden;"><div data-seg-fill="" style="height: 100%; border-radius: var(--r-pill); background: var(--c-ok); transform-origin: left center; transform: scaleX(1); opacity: 1; transition: opacity 200ms ease;"></div></div></div><div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1cqw; margin-top: 2cqw;"><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="0" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-regular); color: var(--c-surface-ink-2); background: transparent; transition: background-color 200ms ease, color 200ms ease;">Angekauft</span></p></div><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="1" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-regular); color: var(--c-surface-ink-2); background: transparent; transition: background-color 200ms ease, color 200ms ease;">In Service</span></p></div><div style="min-width: 0;"><p style="margin: 0; height: max(24px, 4.9cqw); display: flex; align-items: flex-start; line-height: 1.3;"><span data-step-label="2" style="display: inline-block; font-size: max(13px, 2.7cqw); line-height: 1.3; white-space: nowrap; margin-left: -1.8cqw; padding: 0.5cqw 1.8cqw; border-radius: var(--r-pill); font-weight: var(--fw-bold); color: var(--c-ok-text); background: var(--c-ok-tint); transition: background-color 200ms ease, color 200ms ease;">Verfügbar</span></p></div></div></div><div style="margin-bottom: -8cqw; padding-bottom: 4cqw;"><ul style="margin: 0; padding: 0; list-style: none;"><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: none;"><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Lagerplatz</span><span style="flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Tresor T1</span></li><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Zustand</span><span style="flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Sehr gut</span></li><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Uhrwerk</span><span style="flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Automatik</span></li></ul></div></div></div>
+                <div data-card="3" style="grid-area: 1 / 1; align-self: start; min-width: 0; background: var(--c-surface); border-radius: var(--r-lg); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); opacity: {{ card3.mop }}; visibility: {{ card3.mvis }}; transition: {{ card3.mtr }};"><div data-card-body="" style="padding: var(--jm-pad);"><div style="display: flex; align-items: center; gap: 2cqw; margin-bottom: 6cqw;"><svg sc-camel-view-box="0 0 20 20" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: 2.9cqw; height: 2.9cqw;"><path d="M3.5 10h12"></path><path d="M11 5.5L15.5 10L11 14.5"></path></svg><span style="font-size: max(var(--jm-fs-row), 3cqw); font-weight: var(--fw-bold); color: var(--c-ink);">Marktplätze</span></div><div style="display: flex; align-items: center; gap: 4cqw; margin-bottom: 6cqw;"><div style="flex: 0 0 auto; margin-left: -0.6cqw; width: 11cqw; height: 11cqw; border-radius: 50%; overflow: hidden; background: var(--c-surface-accent-tint); display: flex; align-items: center; justify-content: center;"><img src="/assets/rolex-submariner.png" alt="Rolex Submariner Date" style="display: block; width: 75%; height: 75%; object-fit: contain;"></div><div style="min-width: 0;"><p style="margin: 0; font-size: max(var(--jm-fs-title), 3.3cqw); font-weight: var(--fw-bold); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--c-ink);">Rolex Submariner Date</p></div></div><ul style="margin: 0; padding: 0; list-style: none;"><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); height: 9cqw; min-height: var(--jm-row-minh); border-top: none; font-size: max(var(--jm-fs-row), 3cqw);"><span style="white-space: nowrap; font-weight: var(--fw-bold); color: var(--c-ink);">Chrono24</span><span data-toggle="" data-on="false" aria-hidden="true" style="position: relative; flex: 0 0 auto; width: max(36px, 7cqw); height: max(20px, 4cqw); border-radius: var(--r-pill); background: var(--c-surface-line); transition: background-color 250ms ease;"><span data-knob="" style="position: absolute; top: 50%; left: max(2px, 0.4cqw); width: max(16px, 3.2cqw); height: max(16px, 3.2cqw); border-radius: 50%; background: var(--c-surface); box-shadow: 0 1px 2px rgba(0,0,0,.2); transform: translateY(-50%); transition: left 250ms ease;"></span></span></li><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); height: 9cqw; min-height: var(--jm-row-minh); border-top: 1px solid transparent; font-size: max(var(--jm-fs-row), 3cqw);"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; font-weight: var(--fw-bold); color: var(--c-ink);">Wristler</span><span data-toggle="" data-on="false" aria-hidden="true" style="position: relative; flex: 0 0 auto; width: max(36px, 7cqw); height: max(20px, 4cqw); border-radius: var(--r-pill); background: var(--c-surface-line); transition: background-color 250ms ease;"><span data-knob="" style="position: absolute; top: 50%; left: max(2px, 0.4cqw); width: max(16px, 3.2cqw); height: max(16px, 3.2cqw); border-radius: 50%; background: var(--c-surface); box-shadow: 0 1px 2px rgba(0,0,0,.2); transform: translateY(-50%); transition: left 250ms ease;"></span></span></li><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); height: 9cqw; min-height: var(--jm-row-minh); border-top: 1px solid transparent; font-size: max(var(--jm-fs-row), 3cqw);"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; font-weight: var(--fw-bold); color: var(--c-ink);">eBay</span><span data-toggle="" data-on="false" aria-hidden="true" style="position: relative; flex: 0 0 auto; width: max(36px, 7cqw); height: max(20px, 4cqw); border-radius: var(--r-pill); background: var(--c-surface-line); transition: background-color 250ms ease;"><span data-knob="" style="position: absolute; top: 50%; left: max(2px, 0.4cqw); width: max(16px, 3.2cqw); height: max(16px, 3.2cqw); border-radius: 50%; background: var(--c-surface); box-shadow: 0 1px 2px rgba(0,0,0,.2); transform: translateY(-50%); transition: left 250ms ease;"></span></span></li><li data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); height: 9cqw; min-height: var(--jm-row-minh); border-top: 1px solid transparent; font-size: max(var(--jm-fs-row), 3cqw);"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; font-weight: var(--fw-bold); color: var(--c-ink);">Kleinanzeigen</span><span data-toggle="" data-on="false" aria-hidden="true" style="position: relative; flex: 0 0 auto; width: max(36px, 7cqw); height: max(20px, 4cqw); border-radius: var(--r-pill); background: var(--c-surface-line); transition: background-color 250ms ease;"><span data-knob="" style="position: absolute; top: 50%; left: max(2px, 0.4cqw); width: max(16px, 3.2cqw); height: max(16px, 3.2cqw); border-radius: 50%; background: var(--c-surface); box-shadow: 0 1px 2px rgba(0,0,0,.2); transform: translateY(-50%); transition: left 250ms ease;"></span></span></li></ul><div data-publish="" style="margin-top: 6cqw; height: 9.5cqw; min-height: 40px; display: flex; align-items: center; justify-content: center; border-radius: var(--r-pill); background: var(--c-accent); color: var(--c-bg); font-weight: var(--fw-bold); font-size: max(var(--jm-fs-row), 3cqw); opacity: 0.4; pointer-events: none; transition: opacity 250ms ease;">Veröffentlichen</div></div></div>
+                <div data-card="4" style="grid-area: 1 / 1; align-self: start; min-width: 0; background: var(--c-surface); border-radius: var(--r-lg); border: 1px solid var(--c-line); box-shadow: var(--shadow-card); opacity: {{ card4.mop }}; visibility: {{ card4.mvis }}; transition: {{ card4.mtr }};"><div data-card-body="" style="padding: var(--jm-pad);"><div style="display: flex; align-items: center; justify-content: space-between; gap: var(--jm-row-gap); margin-bottom: 6cqw;"><span style="display: flex; align-items: center; gap: 2cqw;"><svg sc-camel-view-box="0 0 20 20" fill="none" stroke="var(--c-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: 2.9cqw; height: 2.9cqw;"><path d="M3.5 10h12"></path><path d="M11 5.5L15.5 10L11 14.5"></path></svg><span style="font-size: max(var(--jm-fs-row), 3cqw); font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Verkauf</span></span><span data-block="Status-Pill" style="flex: 0 0 auto; font-size: max(var(--jm-fs-pill), 2.5cqw); font-weight: var(--fw-bold); line-height: 1.3; white-space: nowrap; color: var(--c-ok-text); background: var(--c-ok-tint); border-radius: var(--r-pill); padding: 0.5cqw 1.8cqw;">Bezahlt</span></div><div style="display: flex; align-items: center; gap: 4cqw; margin-bottom: 6cqw;"><div style="flex: 0 0 auto; margin-left: -0.6cqw; width: 11cqw; height: 11cqw; border-radius: 50%; overflow: hidden; background: var(--c-surface-accent-tint); display: flex; align-items: center; justify-content: center;"><img src="/assets/rolex-submariner.png" alt="Rolex Submariner Date" style="display: block; width: 75%; height: 75%; object-fit: contain;"></div><div style="min-width: 0;"><p style="margin: 0; font-size: max(var(--jm-fs-title), 3.3cqw); font-weight: var(--fw-bold); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--c-ink);">Rolex Submariner Date</p></div></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Kanal</span><span style="flex: 0 0 auto; margin-left: auto; text-align: right; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ink);">Chrono24</span></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Rechnung</span><span style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 1.2cqw; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ok-text);"><svg sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: max(13px, 3cqw); height: max(13px, 3cqw);"><path d="M2.5 7.4l3 3L11.5 4"></path></svg>Erstellt</span></div><div data-arow="" style="position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; column-gap: var(--jm-row-gap); row-gap: 0; font-size: max(var(--jm-fs-row), 3cqw); min-height: max(var(--jm-row-minh), 9cqw); padding: 0.8cqw 0; border-top: 1px solid transparent; border-bottom: 1px solid transparent; margin-bottom: 6cqw;"><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span data-rline="" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; background: var(--c-surface-line); transform-origin: left center;"></span><span style="white-space: nowrap; color: var(--c-surface-ink-2);">Versandlabel</span><span style="flex: 0 0 auto; margin-left: auto; display: flex; align-items: center; gap: 1.2cqw; font-weight: var(--fw-bold); white-space: nowrap; color: var(--c-ok-text);"><svg sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; width: max(13px, 3cqw); height: max(13px, 3cqw);"><path d="M2.5 7.4l3 3L11.5 4"></path></svg>Erstellt</span></div><div><span data-alabel="" style="display: block; font-size: max(13px, 2.7cqw); color: var(--c-surface-ink-2);">Verkaufspreis</span><strong data-big="" style="display: block; margin-top: 0.6cqw; font-size: max(32px, 7cqw); font-weight: var(--fw-bold); letter-spacing: var(--ls-head); line-height: 1; white-space: nowrap; color: var(--c-accent);">5.400 €</strong></div></div></div>
+              </div></div>
+            </div>
+            </sc-if>
+            <sc-if value="{{ noVisual }}" hint-placeholder-val="{{ false }}">
+            <div data-block="Screenshot" style="min-width: 0; background: var(--c-fill); border: 1px solid var(--c-line); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; text-align: center; color: var(--c-ink-2); font-size: var(--fs-small); padding: var(--sp-24); aspect-ratio: 4 / 3; max-height: var(--shot-maxh);"><span style="display: block;">{{ cur.shot }}</span></div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+      <div data-block="Journey.Hinweis" style="margin-top: var(--jh-mt); background: color-mix(in srgb, var(--c-on-dark) 8%, transparent); border-radius: var(--r-lg); padding: var(--jh-pad); display: grid; grid-template-columns: var(--jh-cols); grid-template-rows: var(--jh-rows); column-gap: var(--jh-gap); row-gap: 0; align-items: start;">
+        
+        <div style="grid-column: 1; grid-row: var(--jh-r-h3); align-self: start; min-width: 0;"><h3 style="font-family: var(--font-serif); font-weight: var(--fw-regular); font-size: var(--jh-title-fs); line-height: var(--lh-h3); letter-spacing: var(--ls-head); color: var(--c-on-dark); margin: 0; text-wrap: balance;">Schmuck und Gold</h3></div>
+        <div style="grid-column: var(--jh-wide-col); grid-row: var(--jh-r-body); align-self: start; min-width: 0;">
+          <p style="font-size: var(--fs-small); line-height: var(--lh-body); color: color-mix(in srgb, var(--c-bg) 90%, transparent); margin: var(--sp-12) 0 0; max-width: none; text-wrap: pretty;">Circlaris ist ebenso für den An- und Verkauf von Schmuck und Edelmetallen ausgelegt. Schmuck durchläuft denselben Ankauf wie Uhren, Altgold wird in Schmelzpools mit vollständiger Materialverfolgung geführt, und alles läuft in derselben Buchhaltung zusammen. Wie das in Ihrem Geschäft aussieht, zeigen wir Ihnen gern in der Demo.</p>
+          <div style="display: flex; margin-top: var(--sp-24);"><a href="/demo" style="display: inline-flex; align-items: center; gap: var(--sp-8); padding: var(--sp-12) var(--sp-24); border-radius: 999px; border: 1px solid color-mix(in srgb, var(--c-on-dark) 30%, transparent); background: transparent; color: var(--c-on-dark); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); line-height: 1.2; text-decoration: none; white-space: nowrap; transition: background var(--t-fade);" style-hover="background: color-mix(in srgb, var(--c-on-dark) 10%, transparent); color: var(--c-on-dark);">Demo buchen</a></div>
+        </div>
+        <div data-block="Journey.Hinweis.Avatar" style="grid-column: 2; grid-row: var(--jh-av-row); align-self: var(--jh-av-align); justify-self: end; width: var(--jh-av-size); height: var(--jh-av-size); border-radius: 50%; background: color-mix(in srgb, var(--c-bg) 70%, transparent); display: flex; align-items: center; justify-content: center;"><img src="/assets/ring.webp" alt="" style="display: block; width: 66%; height: 66%; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.18));"></div>
+      </div>
+    </div>
+  </section>
+
+<div style="max-width: var(--w-page); margin: 0 auto;">
+  <section data-block="Kennzahlen" data-screen-label="3 Kennzahlen" id="ergebnis" style="padding: var(--sp-section) 0;">
+    <div style="min-width: 0;">
+      <h2>Mehr Zeit für den Handel</h2>
+      <p style="color: var(--c-ink-2); font-size: var(--fs-lead); max-width: var(--measure-sub);">Zeitersparnis mit Circlaris. Gemessen im laufenden Betrieb von Marks Uhren, Hamburg.</p>
+      <div data-block="Kennzahlen.Raster" ref="{{ kpiRef }}" style="display: grid; grid-template-columns: var(--kpi-cols); gap: var(--sp-32); margin-top: var(--sp-content);">
+        <div data-block="Kennzahl" data-kpi-card="0" data-kpi-delta="−83&nbsp;%">
+          <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-ink-2);">Ankauf</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-8) var(--sp-12); margin-top: var(--sp-16);"><span style="display: inline-flex; align-items: baseline; gap: var(--sp-12); white-space: nowrap;"><span data-kpi-value="5" style="font-family: var(--font-serif); font-weight: var(--fw-regular); font-size: var(--fs-display); line-height: var(--lh-display); letter-spacing: var(--ls-head); font-variant-numeric: tabular-nums; color: var(--c-ink);">5</span><span style="font-family: var(--font-sans); font-size: var(--fs-lead); color: var(--c-ink);">Minuten</span></span><span data-kpi-delta-pill="" style="display: inline-flex; align-items: center; gap: var(--sp-4); white-space: nowrap; background: var(--c-ok-tint); color: var(--c-ok-text); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); line-height: 1.3; border-radius: var(--r-pill); padding: var(--sp-4) var(--sp-12);"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg><span data-kpi-delta-text=""></span></span></div>
+          <p data-kpi-fade="" style="margin: var(--sp-8) 0 0; font-size: var(--fs-kpi-sub); color: var(--c-ink-2);">statt 30 Minuten</p>
+          <p data-kpi-fade="" style="margin: var(--sp-16) 0 0; font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-ink-2);">Ein kompletter Ankauf, inklusive Vertrag und Unterschrift.</p>
+        </div>
+        <div data-block="Kennzahl" data-kpi-card="1" data-kpi-delta="−89&nbsp;%" style="border-left: var(--kpi-sep-l); border-top: var(--kpi-sep-t); padding-left: var(--kpi-pad-l); padding-top: var(--kpi-pad-t);">
+          <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-ink-2);">Inserat</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-8) var(--sp-12); margin-top: var(--sp-16);"><span style="display: inline-flex; align-items: baseline; gap: var(--sp-12); white-space: nowrap;"><span data-kpi-value="10" style="font-family: var(--font-serif); font-weight: var(--fw-regular); font-size: var(--fs-display); line-height: var(--lh-display); letter-spacing: var(--ls-head); font-variant-numeric: tabular-nums; color: var(--c-ink);">10</span><span style="font-family: var(--font-sans); font-size: var(--fs-lead); color: var(--c-ink);">Minuten</span></span><span data-kpi-delta-pill="" style="display: inline-flex; align-items: center; gap: var(--sp-4); white-space: nowrap; background: var(--c-ok-tint); color: var(--c-ok-text); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); line-height: 1.3; border-radius: var(--r-pill); padding: var(--sp-4) var(--sp-12);"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg><span data-kpi-delta-text=""></span></span></div>
+          <p data-kpi-fade="" style="margin: var(--sp-8) 0 0; font-size: var(--fs-kpi-sub); color: var(--c-ink-2);">statt 90 Minuten</p>
+          <p data-kpi-fade="" style="margin: var(--sp-16) 0 0; font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-ink-2);">Ein Inserat pro Uhr, auf allen angebundenen Marktplätzen.</p>
+        </div>
+        <div data-block="Kennzahl" data-kpi-card="2" data-kpi-delta="−99&nbsp;%" style="border-left: var(--kpi-sep-l); border-top: var(--kpi-sep-t); padding-left: var(--kpi-pad-l); padding-top: var(--kpi-pad-t);">
+          <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-ink-2);">Buchhaltung</span>
+          <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-8) var(--sp-12); margin-top: var(--sp-16);"><span style="display: inline-flex; align-items: baseline; gap: var(--sp-12); white-space: nowrap;"><span data-kpi-value="10" style="font-family: var(--font-serif); font-weight: var(--fw-regular); font-size: var(--fs-display); line-height: var(--lh-display); letter-spacing: var(--ls-head); font-variant-numeric: tabular-nums; color: var(--c-ink);">10</span><span style="font-family: var(--font-sans); font-size: var(--fs-lead); color: var(--c-ink);">Minuten</span></span><span data-kpi-delta-pill="" style="display: inline-flex; align-items: center; gap: var(--sp-4); white-space: nowrap; background: var(--c-ok-tint); color: var(--c-ok-text); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); line-height: 1.3; border-radius: var(--r-pill); padding: var(--sp-4) var(--sp-12);"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg><span data-kpi-delta-text=""></span></span></div>
+          <p data-kpi-fade="" style="margin: var(--sp-8) 0 0; font-size: var(--fs-kpi-sub); color: var(--c-ink-2);">statt 3 Tagen</p>
+          <p data-kpi-fade="" style="margin: var(--sp-16) 0 0; font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-ink-2);">Vorbereitende Buchhaltung, pro Monat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-block="Kunden" data-screen-label="4 Kunden" id="kunden" style="padding: 0 0 var(--sp-section);">
+    <div style="min-width: 0;">
+      <div class="divider--mark" aria-hidden="true" style="margin-bottom: calc(var(--sp-section) - 1px);"></div>
+      <h2>Händler, die mit Circlaris arbeiten. Jeden Tag</h2>
+      <p style="color: var(--c-ink-2); font-size: var(--fs-lead); max-width: var(--measure-sub);">Betriebe, die ihren gesamten Ankauf, Inventar und Verkauf über Circlaris führen.</p>
+      <div style="display: grid; grid-template-columns: var(--kpi-cols); gap: var(--sp-32); margin-top: var(--sp-content);">
+        <blockquote data-block="Testimonial" style="margin: 0; min-width: 0; display: flex; flex-direction: column;">
+          <div aria-hidden="true" style="font-family: var(--font-serif); font-size: var(--fs-display); display: block; line-height: 0; height: 0.5em; color: color-mix(in srgb, var(--c-accent) 20%, transparent);"><span style="display: block; transform: translateY(-0.25em);">„</span></div>
+          <p style="margin: 0; flex: 1 0 auto; font-family: var(--font-serif); font-size: var(--fs-quote); line-height: var(--lh-quote); font-weight: var(--fw-regular); color: var(--c-ink); text-wrap: pretty;">Früher ging nach jedem Ankauf eine halbe Stunde für Papierkram drauf. Die Zeit haben wir heute für wichtigere Dinge.</p>
+          <footer style="margin-top: var(--sp-24); display: flex; align-items: center; gap: var(--sp-16); font-family: var(--font-sans); font-size: var(--fs-small); line-height: var(--lh-body);">
+            <img data-block="Portrait" src="/assets/avatar-1.jpg" alt="Johann Moor" style="flex: 0 0 var(--size-avatar-sm); width: var(--size-avatar-sm); height: var(--size-avatar-sm); border-radius: 50%; object-fit: cover; background: var(--c-fill); border: 1px solid var(--c-line);">
+            <div style="min-width: 0;"><div style="font-weight: var(--fw-bold); color: var(--c-ink);">Johann Moor</div><div style="color: var(--c-ink-2);">Geschäftsführer, Marks Uhren</div></div>
+          </footer>
+        </blockquote>
+        <blockquote data-block="Testimonial" style="margin: 0; min-width: 0; display: flex; flex-direction: column; border-left: var(--kpi-sep-l); border-top: var(--kpi-sep-t); padding-left: var(--kpi-pad-l); padding-top: var(--kpi-pad-t);">
+          <div aria-hidden="true" style="font-family: var(--font-serif); font-size: var(--fs-display); display: block; line-height: 0; height: 0.5em; color: color-mix(in srgb, var(--c-accent) 20%, transparent);"><span style="display: block; transform: translateY(-0.25em);">„</span></div>
+          <p style="margin: 0; flex: 1 0 auto; font-family: var(--font-serif); font-size: var(--fs-quote); line-height: var(--lh-quote); font-weight: var(--fw-regular); color: var(--c-ink); text-wrap: pretty;">Der Umzug unserer Daten hat ein Wochenende gedauert. Seitdem pflegen wir keine Excel-Liste mehr.</p>
+          <footer style="margin-top: var(--sp-24); display: flex; align-items: center; gap: var(--sp-16); font-family: var(--font-sans); font-size: var(--fs-small); line-height: var(--lh-body);">
+            <img data-block="Portrait" src="/assets/avatar-2.jpg" alt="Ardeshir Nobari" style="flex: 0 0 var(--size-avatar-sm); width: var(--size-avatar-sm); height: var(--size-avatar-sm); border-radius: 50%; object-fit: cover; background: var(--c-fill); border: 1px solid var(--c-line);">
+            <div style="min-width: 0;"><div style="font-weight: var(--fw-bold); color: var(--c-ink);">Ardeshir Nobari</div><div style="color: var(--c-ink-2);">Geschäftsführer, Mad4Watches</div></div>
+          </footer>
+        </blockquote>
+        <blockquote data-block="Testimonial" style="margin: 0; min-width: 0; display: flex; flex-direction: column; border-left: var(--kpi-sep-l); border-top: var(--kpi-sep-t); padding-left: var(--kpi-pad-l); padding-top: var(--kpi-pad-t);">
+          <div aria-hidden="true" style="font-family: var(--font-serif); font-size: var(--fs-display); display: block; line-height: 0; height: 0.5em; color: color-mix(in srgb, var(--c-accent) 20%, transparent);"><span style="display: block; transform: translateY(-0.25em);">„</span></div>
+          <p style="margin: 0; flex: 1 0 auto; font-family: var(--font-serif); font-size: var(--fs-quote); line-height: var(--lh-quote); font-weight: var(--fw-regular); color: var(--c-ink); text-wrap: pretty;">Wenn uns etwas fehlt, wird unser Feedback gehört. Der direkte Draht zum Entwicklungs-Team ist wirklich toll!</p>
+          <footer style="margin-top: var(--sp-24); display: flex; align-items: center; gap: var(--sp-16); font-family: var(--font-sans); font-size: var(--fs-small); line-height: var(--lh-body);">
+            <img data-block="Portrait" src="/assets/avatar-3c.jpg" alt="Marvin von Spreckelsen" style="flex: 0 0 var(--size-avatar-sm); width: var(--size-avatar-sm); height: var(--size-avatar-sm); border-radius: 50%; object-fit: cover; background: var(--c-fill); border: 1px solid var(--c-line);">
+            <div style="min-width: 0;"><div style="font-weight: var(--fw-bold); color: var(--c-ink);">Marvin von Spreckelsen</div><div style="color: var(--c-ink-2);">Juwelier von Spreckelsen</div></div>
+          </footer>
+        </blockquote>
+      </div>
+      <div data-block="Videos" style="display: grid; grid-template-columns: var(--kpi-cols); gap: var(--sp-32); margin-top: var(--sp-content); align-items: start;">
+        <div data-block="Video.Text" style="min-width: 0;">
+          <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-ink-2);">Im Gespräch</span>
+          <h3 style="margin: var(--sp-16) 0 0; font-family: var(--font-sans); font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: var(--fw-bold); color: var(--c-ink); text-wrap: pretty;">Wie Marks Uhren mit Circlaris arbeitet</h3>
+          <p style="margin: var(--sp-16) 0 0; font-size: var(--fs-text); color: var(--c-ink-2); text-wrap: pretty;">Johann Moor über schnellere Ankäufe, weniger Papier und einen stressfreien Monatsabschluss.</p>
+        </div>
+        <div data-block="Video" style="grid-column: var(--media-span); min-width: 0; position: relative; background: var(--c-fill); border: 1px solid var(--c-line); border-radius: var(--r-lg); aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img src="/assets/video-marks.jpg" alt="Johann Moor auf der Messe" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+          <button type="button" aria-label="Video abspielen" style="position: relative; width: 72px; height: 72px; border-radius: 50%; border: 0; padding: 0; background: var(--c-accent); display: flex; align-items: center; justify-content: center; cursor: pointer;" style-hover="background: var(--c-accent-hover);"><svg width="24" height="28" sc-camel-view-box="0 0 24 28" aria-hidden="true" style="margin-left: 4px;"><path d="M0 0 L24 14 L0 28 Z" fill="#fff"></path></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-block="Wechsel" data-screen-label="5 Wechsel" id="wechsel" style="padding: 0 0 var(--sp-section);">
+    <div style="min-width: 0;">
+      <div class="divider--mark" aria-hidden="true" style="margin-bottom: calc(var(--sp-section) - 1px);"></div>
+      <h2 style="margin-bottom: 0;">Sicheres Hosting, begleiteter Wechsel</h2>
+      
+      <dl data-block="Faktenliste" style="display: grid; grid-template-columns: var(--facts-cols); gap: var(--sp-48) var(--sp-64); margin: var(--sp-content) 0 1em;">
+        <div style="display: flex; gap: var(--sp-20); align-items: flex-start; min-width: 0;"><div data-block="Icon" aria-hidden="true" style="flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-bg)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></div><div style="min-width: 0;"><dt style="font-size: var(--fs-text); font-weight: var(--fw-bold); margin-bottom: var(--sp-8); color: var(--c-ink);">Hosting in Deutschland</dt><dd style="margin: 0; color: var(--c-ink-2); font-size: var(--fs-text); max-width: var(--measure-text);">Ihre Daten liegen in Rechenzentren in Deutschland, betrieben von Hetzner, einem der großen deutschen Hosting-Anbieter.</dd></div></div>
+        <div style="display: flex; gap: var(--sp-20); align-items: flex-start; min-width: 0; border-left: var(--facts-sep-l); padding-left: var(--facts-pad-l);"><div data-block="Icon" aria-hidden="true" style="flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-bg)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div><div style="min-width: 0;"><dt style="font-size: var(--fs-text); font-weight: var(--fw-bold); margin-bottom: var(--sp-8); color: var(--c-ink);">DSGVO mit Nachweis</dt><dd style="margin: 0; color: var(--c-ink-2); font-size: var(--fs-text); max-width: var(--measure-text);">Mit dem Vertrag schließen wir einen Auftragsverarbeitungsvertrag nach DSGVO ab.</dd></div></div>
+        <div style="display: flex; gap: var(--sp-20); align-items: flex-start; min-width: 0;"><div data-block="Icon" aria-hidden="true" style="flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-bg)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"></path><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path><path d="m21 3 1 11h-2"></path><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path><path d="M3 4h8"></path></svg></div><div style="min-width: 0;"><dt style="font-size: var(--fs-text); font-weight: var(--fw-bold); margin-bottom: var(--sp-8); color: var(--c-ink);">Unterstützung beim Wechsel</dt><dd style="margin: 0; color: var(--c-ink-2); font-size: var(--fs-text); max-width: var(--measure-text);">Beim Start und bei den ersten Ankäufen unterstützen wir Sie persönlich, damit der Übergang reibungslos verläuft.</dd></div></div>
+        <div style="display: flex; gap: var(--sp-20); align-items: flex-start; min-width: 0; border-left: var(--facts-sep-l); padding-left: var(--facts-pad-l);"><div data-block="Icon" aria-hidden="true" style="flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center;"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--c-bg)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg></div><div style="min-width: 0;"><dt style="font-size: var(--fs-text); font-weight: var(--fw-bold); margin-bottom: var(--sp-8); color: var(--c-ink);">Seit 2022 im täglichen Einsatz</dt><dd style="margin: 0; color: var(--c-ink-2); font-size: var(--fs-text); max-width: var(--measure-text);">Circlaris wird jeden Tag in Hamburger Uhrengeschäften genutzt und laufend weiterentwickelt, mit Funktionen, die Händler selbst angestoßen haben.</dd></div></div>
+      </dl>
+    </div>
+  </section>
+
+  <section data-block="Team" data-screen-label="6 Person" id="demo" style="padding: var(--sp-section) 0; border-top: 1px solid var(--c-line);">
+    <div style="min-width: 0;">
+      <div data-block="Person.Box" style="background: var(--c-accent); border-radius: 48px; padding: var(--person-box-pad); display: grid; grid-template-columns: var(--person-cols); column-gap: var(--sp-64); row-gap: var(--sp-32); align-items: center;">
+        <div style="min-width: 0; order: var(--person-text-order);">
+          <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-on-dark-2); margin-bottom: var(--sp-16);">Ihr Ansprechpartner</span>
+          <h2 style="color: var(--c-on-dark); text-wrap: balance; max-width: var(--measure-h2);">Wir nehmen uns gerne Zeit für Sie</h2>
+          <p style="color: var(--c-on-dark-2); font-size: var(--fs-lead); max-width: var(--measure-sub);">Erzählen Sie uns, wie Sie heute arbeiten. Dr. Thomas Hansmann zeigt Ihnen Circlaris und beantwortet Ihre Fragen.</p>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-16) var(--sp-24); margin-top: var(--sp-32);">
+            <a data-block="Button" href="/demo" style="display: inline-block; text-align: center; background: var(--c-bg); color: var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; transition: background var(--t-fade); padding: var(--sp-16) var(--sp-32);" style-hover="background: color-mix(in srgb, var(--c-bg) 90%, transparent); color: var(--c-accent);">Demo buchen</a>
+            <a href="#kontakt" style="font-size: var(--fs-small); color: var(--c-on-dark-2); text-decoration: none; transition: color var(--t-fade);" style-hover="color: var(--c-on-dark);">Lieber erst eine Frage stellen? Zum Kontaktformular</a>
+          </div>
+        </div>
+        <figure data-block="Person" style="margin: 0; min-width: 0; order: 1; width: 100%; max-width: var(--person-photo-w); justify-self: var(--person-photo-js);">
+          <div data-block="Portrait" style="width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden; background: color-mix(in srgb, var(--c-on-dark) 10%, transparent);"><img src="/assets/kontakt-hansmann.jpg" alt="Dr. Thomas Hansmann" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;"></div>
+          <figcaption style="margin-top: var(--sp-16);">
+            <div style="font-size: var(--fs-text); font-weight: var(--fw-bold); color: var(--c-on-dark);">Dr. Thomas Hansmann</div>
+            <div style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Geschäftsführer</div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section data-block="FAQ" data-screen-label="7 FAQ" id="fragen" style="padding: var(--sp-section) 0; border-top: 1px solid var(--c-line);">
+    <div style="min-width: 0;">
+      <h2 style="margin-bottom: var(--sp-64);">Gut zu wissen</h2>
+      <details data-block="FAQ.Item" style="margin-top: var(--sp-48); font-size: var(--fs-text); border-top: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Was kostet Circlaris?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Den Preis nennen wir Ihnen im Demo-Gespräch, abhängig von Ihrem Betrieb.</p></details>
+      <details data-block="FAQ.Item" style="font-size: var(--fs-text); border-top: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Ich handle auch mit Schmuck und Gold. Geht das?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Schmuckankauf ist Teil des Ankaufs. Für Gold und Edelmetalle gibt es ein Zusatzmodul mit Schmelzpool und Materialverfolgung.</p></details>
+      <details data-block="FAQ.Item" style="font-size: var(--fs-text); border-top: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Was ist mit Steuern und Buchhaltung?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Differenz- oder Regelbesteuerung, EU-Steuersätze und Drittland-Export: Circlaris ordnet die passende Regelung automatisch zu. Ihr Steuerberater bekommt den Export mit einem Klick.</p></details>
+      <details data-block="FAQ.Item" style="font-size: var(--fs-text); border-top: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Ich arbeite allein. Ist das nicht zu groß für mich?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Die meisten Händler, die Circlaris nutzen, arbeiten mit ein bis drei Personen. Ankaufen können Sie am ersten Tag, Anbindungen kommen dazu, wenn Sie sie brauchen.</p></details>
+      <details data-block="FAQ.Item" style="font-size: var(--fs-text); border-top: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Muss ich meine Marktplätze aufgeben?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Nein. Circlaris ist an genau die Kanäle angebunden, auf denen Uhrenhändler verkaufen: eBay, Chrono24, Wristler, Kleinanzeigen sowie Ihr Shop auf Shopware oder Shopify. Sie pflegen alles zentral.</p></details>
+      <details data-block="FAQ.Item" style="font-size: var(--fs-text); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); padding: var(--sp-24) 0; max-width: var(--measure-text);"><summary style="cursor: pointer; font-weight: var(--fw-bold);">Ist Circlaris mobil nutzbar?</summary><p style="color: var(--c-ink-2); margin: var(--sp-12) 0 0;">Ja. Circlaris läuft im Browser, auch auf dem Handy. Eine Ankaufsanfrage mit Fotos, Preisvorstellung und Ausweis lässt sich direkt von unterwegs – z.B. auf einer Messe – anlegen, der Vertrag wird dort unterschrieben.</p></details>
+    </div>
+  </section>
+
+</div>
+</main>
+<footer data-block="Footer" style="background: var(--c-ink); color: var(--c-on-dark); padding: var(--footer-pad) 0;">
+  <div style="max-width: var(--w-page); margin: 0 auto; display: flex; flex-direction: var(--footer-dir); justify-content: space-between; align-items: var(--footer-align); gap: var(--sp-32);">
+    <div style="min-width: 0;">
+      <a href="/" aria-label="Circlaris Startseite" style="display: block; width: fit-content; color: var(--c-on-dark); text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" sc-camel-view-box="0 0 763.1 199.5" fill="currentColor" aria-hidden="true" focusable="false" style="display: block; height: 48px; width: auto;"><path d="M192.6,119.9c-1,0-1.8,0-2.5,0c-10.1,0-20.1,0-30.2-0.1c-1,0-1.4,0.3-1.8,1.2c-5.5,13.3-14.3,24-26.9,31c-17.9,10-36.6,11.2-55.5,3c-12.6-5.5-21.8-14.8-28.1-26.9c-7.4-14.3-9.2-29.3-5.6-44.9c1.7-7.1,5-13.5,9.4-19.4c3.8-5.1,8.2-9.7,13.4-13.5c10.2-7.3,21.5-11.5,34-12c14.5-0.6,27.6,3.2,39.2,11.9c8.1,6,13.7,13.9,17.4,23.2c1.4,3.6,2.5,7.3,3.5,11c0.9,3.2-1.6,5.7-4.6,5c-1.7-0.4-2.6-1.7-2.9-3.4c-1.6-7.2-4.4-14-8.8-20c-8-10.8-18.8-17.2-31.9-19.4C94.2,43.8,79.2,48,66.6,59C52.2,71.6,46.2,87.7,49,106.7c1.8,12,6.6,22.7,15.5,31.2c13.8,13.3,30.2,17.9,48.8,13c14.3-3.8,25.4-12.3,33.4-24.7c2.2-3.4,3.8-7,4.9-10.8c0.6-2.1,2-3.1,4.2-3.1c10.8,0,21.5,0,32.3,0c2.9,0,5.8,0,8.7,0c2.4,0,4.4,1.8,4.1,4.2c-0.3,2.8-0.8,5.7-1.5,8.5c-3.2,12.7-9.2,24.1-17.1,34.5c-7.8,10.2-17.3,18.6-28.3,25.2c-10.9,6.5-22.6,10.7-35,12.9c-16.5,2.9-32.8,2.4-48.9-2.1c-17.9-5-32.6-14.9-44.4-29.2C14.8,153.3,7.1,138.6,3,122.1c-4.5-18.1-4-36,2.1-53.8C11,51.2,21.2,36.9,34.8,25C45,16.2,56.4,9.5,69.2,5.4c13.3-4.4,27-6.1,41-5c20.6,1.6,39,8.7,55,21.8c7.3,6,13.3,13.1,18.6,20.9c7.4,10.8,12.4,22.6,15.2,35.4c0.4,2,0.8,4,1.1,6c0.4,2.5-0.9,4.4-3,4.8c-2.3,0.4-4.2-0.9-4.7-3.4c-1.7-9-4.2-17.8-8.3-26c-8.5-17.3-20.4-31.5-37.6-40.9c-10.8-5.9-22.5-9.4-34.8-10.6C101,7.3,90.3,8,79.7,10.7C68.9,13.4,58.8,17.8,49.5,24C40.8,29.8,33,36.6,26.6,44.9C11.6,64.6,5,86.7,8.6,111.5c2.8,19,10.7,35.8,23.3,50.2c8.2,9.3,17.5,17.2,28.9,22.3c8.2,3.7,16.8,5.9,25.7,7.1c9.7,1.2,19.4,1,29-0.7c12.4-2.2,24.2-6.4,35-13.1c19.3-12,32.8-28.7,40-50.4C191.4,124.6,191.9,122.4,192.6,119.9z"></path><path d="M20.4,98.4c-0.3-17.9,5.3-33.8,16.4-47.8c8.8-11.1,19.6-19.5,32.7-25c8.1-3.4,16.5-5.3,25.2-6c11.3-1,22.5,0,33.3,3.5c16.9,5.5,30.1,15.6,39.6,30.7c5.9,9.3,9.6,19.5,11.7,30.3c0.3,1.4,0.4,2.8-0.7,3.9c-1,1.2-2.3,1.6-3.8,1.2c-1.6-0.4-2.6-1.5-2.9-3.1c-1.3-7.3-3.5-14.2-6.8-20.8c-8.9-17.8-22.6-29.9-41.8-35.5c-9.8-2.9-19.7-3.6-29.8-2.4c-6.8,0.8-13.4,2.2-19.8,4.9c-11.8,4.9-22,12.1-30.1,22.1c-4.2,5.2-7.9,10.7-10.4,16.9c-6.3,15.4-7.3,31.2-2.7,47.3c2.7,9.7,6.9,18.6,13.2,26.5c11.1,13.9,25.1,23.2,42.8,26.4c18.1,3.3,35.2,0.3,51.3-8.5c12.7-7,22-17.2,29.2-29.6c0.5-0.9,1-1.9,1.5-2.8c1.1-2,3.2-2.8,5.1-1.9c1.9,1,2.7,3.2,1.7,5.2c-2.3,4.6-4.9,8.9-8,13c-13.3,17.7-30.9,28.1-52.6,31.9c-15.3,2.7-30.3,1.4-44.8-4.3c-10.1-3.9-18.7-10.1-26.3-17.7c-13.1-13.1-20.5-28.9-22.9-47.2c-0.2-1.7-0.4-3.4-0.5-5.1C20.4,102.4,20.4,100.4,20.4,98.4z"></path><path d="M266.2,130.2c-5.3,0-10-1.2-14.2-3.6c-4.1-2.4-7.4-5.8-9.7-10c-2.3-4.2-3.5-9.1-3.5-14.7c0-5.5,1.2-10.4,3.5-14.7s5.6-7.6,9.7-10c4.1-2.4,8.8-3.6,14.1-3.6c3.8,0,7.2,0.7,10.5,2c3.2,1.3,6.1,3.2,8.5,5.6c2.4,2.4,4.3,5.1,5.6,8.2l-9.9,3.7c-0.9-1.9-2.1-3.6-3.5-5c-1.5-1.4-3.1-2.6-5-3.4c-1.9-0.8-3.9-1.2-6.1-1.2c-3.2,0-6,0.8-8.5,2.4c-2.5,1.6-4.4,3.8-5.8,6.5c-1.4,2.8-2.1,6-2.1,9.6c0,3.7,0.7,6.9,2.1,9.7c1.4,2.8,3.4,5,5.9,6.6c2.5,1.6,5.4,2.4,8.6,2.4c2.2,0,4.3-0.4,6.1-1.3c1.9-0.9,3.5-2,4.9-3.6c1.4-1.5,2.6-3.3,3.5-5.2l9.9,3.6c-1.3,3.2-3.2,6-5.6,8.4c-2.4,2.5-5.3,4.4-8.5,5.7C273.5,129.5,270,130.2,266.2,130.2z"></path><path d="M314.4,129.3V74.5h10.7v54.8H314.4z"></path><path d="M352.6,129.3V74.5H373c3.9,0,7.3,0.8,10.2,2.3c3,1.5,5.3,3.6,7,6.2c1.7,2.6,2.5,5.7,2.5,9.2c0,3.6-1,6.8-2.9,9.5c-1.9,2.7-4.5,4.8-7.6,6.2l12.7,21.4h-12.1l-11.2-19.4c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0h-6.2v19.4H352.6zM363.3,100.1h9.7c1.6,0,3.1-0.3,4.3-1c1.3-0.7,2.3-1.6,3.1-2.8c0.8-1.2,1.1-2.6,1.1-4.1c0-2.3-0.8-4.2-2.5-5.7c-1.7-1.5-3.9-2.2-6.5-2.2h-9.2V100.1z"></path><path d="M442.9,130.2c-5.3,0-10-1.2-14.2-3.6c-4.1-2.4-7.4-5.8-9.7-10c-2.3-4.2-3.5-9.1-3.5-14.7c0-5.5,1.2-10.4,3.5-14.7s5.6-7.6,9.7-10c4.1-2.4,8.8-3.6,14.1-3.6c3.8,0,7.2,0.7,10.5,2c3.2,1.3,6.1,3.2,8.5,5.6s4.3,5.1,5.6,8.2l-9.9,3.7c-0.9-1.9-2.1-3.6-3.5-5c-1.5-1.4-3.1-2.6-5-3.4c-1.9-0.8-3.9-1.2-6.1-1.2c-3.2,0-6,0.8-8.5,2.4c-2.5,1.6-4.4,3.8-5.8,6.5c-1.4,2.8-2.1,6-2.1,9.6c0,3.7,0.7,6.9,2.1,9.7c1.4,2.8,3.4,5,5.9,6.6c2.5,1.6,5.4,2.4,8.6,2.4c2.2,0,4.3-0.4,6.1-1.3c1.9-0.9,3.5-2,4.9-3.6c1.4-1.5,2.6-3.3,3.5-5.2l9.9,3.6c-1.3,3.2-3.2,6-5.6,8.4c-2.4,2.5-5.3,4.4-8.5,5.7C450.2,129.5,446.7,130.2,442.9,130.2z"></path><path d="M491.1,129.3V74.5h10.7v45h24.1v9.8H491.1z"></path><path d="M543.4,129.3L565,74.5h11.4l21.6,54.8h-11.3l-4.7-12h-22.5l-4.7,12H543.4zM563,107.8h15.5l-7.7-19.9L563,107.8z"></path><path d="M620.2,129.3V74.5h20.3c3.9,0,7.3,0.8,10.2,2.3c3,1.5,5.3,3.6,7,6.2c1.7,2.6,2.5,5.7,2.5,9.2c0,3.6-1,6.8-2.9,9.5c-1.9,2.7-4.5,4.8-7.6,6.2l12.7,21.4h-12.1l-11.2-19.4c-0.3,0-0.6,0-1,0c-0.3,0-0.7,0-1.1,0h-6.2v19.4H620.2zM630.9,100.1h9.7c1.6,0,3.1-0.3,4.3-1c1.3-0.7,2.3-1.6,3.1-2.8c0.8-1.2,1.1-2.6,1.1-4.1c0-2.3-0.8-4.2-2.5-5.7c-1.7-1.5-3.9-2.2-6.5-2.2h-9.2V100.1z"></path><path d="M686.3,129.3V74.5H697v54.8H686.3z"></path><path d="M742.9,130.2c-2.8,0-5.3-0.3-7.7-1c-2.4-0.7-4.5-1.6-6.4-2.9c-1.9-1.2-3.4-2.6-4.7-4.1c-1.2-1.5-2-3.1-2.4-4.8l10.5-3.1c0.7,1.8,1.9,3.3,3.6,4.6c1.7,1.3,3.9,1.9,6.5,2c2.8,0.1,5-0.5,6.8-1.8c1.7-1.3,2.6-2.9,2.6-4.8c0-1.7-0.7-3.2-2.1-4.3c-1.4-1.2-3.3-2.1-5.7-2.7l-7.1-1.9c-2.7-0.7-5-1.7-7-3.1c-2-1.4-3.6-3.1-4.8-5.1c-1.1-2-1.7-4.4-1.7-7.1c0-5.2,1.7-9.2,5.1-12.1c3.4-2.9,8.3-4.3,14.5-4.3c3.5,0,6.6,0.5,9.2,1.5c2.6,1,4.8,2.5,6.6,4.3c1.8,1.9,3.1,4.1,4.1,6.6l-10.4,3.2c-0.6-1.8-1.8-3.3-3.4-4.5c-1.7-1.3-3.8-1.9-6.3-1.9c-2.6,0-4.7,0.6-6.1,1.8c-1.5,1.2-2.2,2.9-2.2,5.1c0,1.7,0.6,3.1,1.8,4.1c1.2,1,2.8,1.7,4.8,2.3l7.2,1.8c4.7,1.1,8.3,3.2,11,6.2s3.9,6.3,3.9,9.9c0,3.2-0.8,6.1-2.3,8.5s-3.8,4.3-6.8,5.7C750.8,129.5,747.2,130.2,742.9,130.2z"></path></svg></a>
+      <div style="margin-top: var(--sp-12); font-size: var(--fs-small); color: var(--c-on-dark-2);">{{ copyright }}</div>
+    </div>
+    <nav aria-label="Rechtliches" style="display: flex; flex-direction: var(--footer-dir); gap: var(--footer-link-gap); font-size: var(--fs-small);">
+      <a href="/impressum" style="color: var(--c-on-dark); text-decoration: none;" style-hover="text-decoration: underline;">Impressum</a>
+      <a href="/datenschutz" style="color: var(--c-on-dark); text-decoration: none;" style-hover="text-decoration: underline;">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = { menuOpen: false, active: 0, shown: 0, fading: false, jIntro: true };
+  visualRef = React.createRef();
+  railRef = React.createRef();
+  pfeilRef = React.createRef();
+  placePfeil = () => {
+    const b = this.pfeilRef.current, v = this.visualRef.current; if (!b || !v) return;
+    const c = v.querySelector('[data-card="0"]'); if (!c) return;
+    const vr = v.getBoundingClientRect(), cr = c.getBoundingClientRect();
+    if (!cr.height) return;
+    b.style.top = (cr.top - vr.top + cr.height / 2 - 28) + 'px';
+  };
+  kpiRef = React.createRef();
+  static SLIDE_MS = 720;
+  static SEQ_SPEED = 0.75;
+  static STATIONS = [
+    { name: 'Ankauf', chips: ['Herkunftsprüfung', 'Versicherte Abholung', 'Digitale Unterschrift'], shot: 'Ausschnitt: Preisfindung mit Entscheidung Ankauf / Kommission',
+      text: 'Anfrage, Fotos und Preisvorstellung sind in wenigen Minuten erfasst, am Smartphone beim Kunden oder am Rechner im Geschäft. Auf Wunsch mit versicherter Abholung. Nach Begutachtung und Herkunftsprüfung erstellen Sie den Ankaufsvertrag mit einem Klick, unterschrieben wird digital.' },
+    { name: 'Service', chips: ['Status', 'Fälligkeit', 'Servicehistorie'], shot: 'Ausschnitt: Serviceaufgabe mit Werkstatt, Fälligkeit und Status',
+      text: 'Braucht die Uhr eine Revision oder Politur, geht sie in die eigene Werkstatt oder zum externen Uhrmacher. Standort, Rückgabetermin und Servicekosten sind an jeder Uhr abrufbar, ohne separate Liste. Jede Arbeit wird in der Servicehistorie festgehalten, wie in einem Scheckheft.', },
+    { name: 'Inventar', chips: ['Lagerplatz', 'Produkteigenschaften', 'Inventur mit Smartphone'], shot: 'Ausschnitt: Artikelseite mit Einkaufsdaten',
+      text: 'Jede Uhr existiert genau einmal, mit Artikelnummer und Lagerplatz. Stammdaten, Produkteigenschaften, Einkaufspreis, Servicearbeiten und Zubehör sehen Sie auf einen Blick. Fragt ein Kunde nach der Bandlänge, ist sie mit einem Klick abrufbar. Die Inventur machen Sie mit dem Smartphone.' },
+    { name: 'Vermarktung', chips: ['eBay', 'Chrono24', 'Wristler', 'Kleinanzeigen', 'Shopware', 'Shopify'], shot: 'Ausschnitt: Artikel mit Kanalfreigabe (Demo-Daten nötig)',
+      text: 'Sobald eine Uhr verkaufsbereit ist, erstellt Circlaris die Inserate aus Artikeldaten und Fotos und veröffentlicht sie direkt auf den angebundenen Marktplätzen. Die Provision je Marktplatz ist eingerechnet, einzelne Preise passen Sie bei Bedarf an.' },
+    { name: 'Verkauf', chips: ['E-Rechnung', 'Rechnung DE/EN', 'Wertkurier nach Wahl'], shot: 'Ausschnitt: Rechnung mit Auslandshinweis und Versandauftrag',
+      text: 'Ob im Geschäft, auf der Messe oder über einen Marktplatz: Der Verkauf erzeugt Rechnung und Lieferschein, die passende Umsatzsteuerregelung ist bereits zugeordnet. Auf Wunsch erstellt Circlaris das Versandlabel automatisch und verfolgt die Sendung. Der Steuerberater bekommt alles mit einem Klick.' },
+  ];
+  componentWillUnmount() { window.removeEventListener('resize', this.placePfeil); clearTimeout(this.ft); clearTimeout(this.pt); this.stopAnims(); if (this.kpiIO) this.kpiIO.disconnect(); if (this.jIO) this.jIO.disconnect(); clearTimeout(this.slideT); }
+  componentDidMount() { this.setupKpi(); this.setupJourney(); requestAnimationFrame(this.placePfeil); if (document.fonts) document.fonts.ready.then(this.placePfeil); window.addEventListener('resize', this.placePfeil); }
+  setupJourney() {
+    const root = this.visualRef.current || document.querySelector('[data-block="Journey.Visual"]'); if (!root || this.jIO) return;
+    const body = root.querySelector('[data-card="0"] [data-card-body]');
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!body || reduced || !('IntersectionObserver' in window)) { this.endIntro(body); return; }
+    this.jIO = new IntersectionObserver(entries => {
+      if (!entries.some(en => en.isIntersecting)) return;
+      this.stopJourneyIO();
+      if (this.state.active === 0) this.playIn(0, true); else this.endIntro(body);
+    }, { threshold: 0.6, rootMargin: '0px 0px -10% 0px' });
+    this.jIO.observe(root);
+  }
+  endIntro(body) {
+    const b = body || document.querySelector('[data-card="0"] [data-card-body]');
+    if (b) b.style.opacity = '1';
+    if (this.state.jIntro) this.setState({ jIntro: false });
+  }
+  reducedMotion() { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+  cardEl(i) { return document.querySelector('[data-block="UI-Ausschnitt.Journey"] [data-card="' + i + '"]'); }
+  endSlide() {
+    clearTimeout(this.slideT);
+    const prev = this.slideFrom, out = typeof prev === 'number' && prev !== this.state.active ? this.cardEl(prev) : null;
+    if (out) out.style.clipPath = 'inset(50%)';
+    (this.slideAnims || []).forEach(an => { try { an.cancel(); } catch (e) {} });
+    this.slideAnims = [];
+    [0, 1, 2, 3, 4].forEach(k => { const c = this.cardEl(k); if (c) { c.style.willChange = ''; c.style.transform = ''; } });
+    this.slideFrom = null;
+    this.setState({ slideTick: (this.state.slideTick || 0) + 1 });
+  }
+  slide(a, b) {
+    this.endSlide();
+    this.stopAnims(true);
+    const inc0 = this.cardEl(b), body = inc0 && inc0.querySelector('[data-card-body]');
+    if (b === 1 || b === 2) this.setSvc('start', b);
+    this.setSeq(b, 'start');
+    if (b === 3) { const c3 = this.cardEl(3); if (c3) c3.querySelectorAll('[data-toggle], [data-knob], [data-publish]').forEach(el => { el.style.transition = 'none'; }); this.setToggles(false); if (c3) { void c3.offsetWidth; c3.querySelectorAll('[data-toggle]').forEach(el => { el.style.transition = 'background-color 250ms ease'; }); c3.querySelectorAll('[data-knob]').forEach(el => { el.style.transition = 'left 250ms ease'; }); c3.querySelectorAll('[data-publish]').forEach(el => { el.style.transition = 'opacity 250ms ease'; }); } }
+    if (false && body) {
+      body.querySelectorAll('svg path').forEach(p => { let len = 0; try { len = p.getTotalLength(); } catch (e) {} if (len) { p.style.strokeDasharray = len; p.style.strokeDashoffset = len; } });
+      const big = body.querySelector('[data-big]');
+      if (big) {
+        if (!big.dataset.target) big.dataset.target = (big.textContent || '').trim();
+        const mm = big.dataset.target.match(/^([\d.]+)(.*)$/), prev = this.lastBig;
+        if (mm && !/^,/.test(mm[2])) big.textContent = (prev && prev.suffix === mm[2] ? prev.value.toLocaleString('de-DE') : '0') + mm[2];
+      }
+    }
+    const token = this.slideToken = (this.slideToken || 0) + 1;
+    const dir = b > a ? -1 : 1, out0 = this.cardEl(a);
+    const dist = (out0 ? out0.offsetWidth : 0) + ((this.visualRef.current || out0 || { offsetWidth: 0 }).offsetWidth * 0.06);
+    if (inc0) { inc0.style.clipPath = ''; inc0.style.willChange = 'transform'; inc0.style.transform = 'translateX(' + (-dir * dist) + 'px)'; }
+    this.slideFrom = a;
+    this.setState({ active: b, fading: true, slideTick: token });
+    clearTimeout(this.ft);
+    this.ft = setTimeout(() => this.setState({ shown: b, fading: false }), 150);
+    let started = false;
+    const start = () => {
+      if (started || token !== this.slideToken) return;
+      started = true;
+      const out = this.cardEl(a), inc = this.cardEl(b); if (!out || !inc) return;
+      const opt = { duration: Component.SLIDE_MS, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' };
+      out.style.willChange = 'transform'; inc.style.willChange = 'transform';
+      this.slideAnims = [
+        out.animate([{ transform: 'translateX(0px)', opacity: 1 }, { transform: 'translateX(' + (dir * dist * 0.8) + 'px)', opacity: 0, offset: 0.6 }, { transform: 'translateX(' + (dir * dist) + 'px)', opacity: 0 }], opt),
+        inc.animate([{ transform: 'translateX(' + (-dir * dist) + 'px)' }, { transform: 'translateX(0px)' }], opt)
+      ];
+      inc.style.transform = '';
+      this.slideAnims[0].finished.then(() => { if (token === this.slideToken) { const o = this.cardEl(a); if (o && this.state.active !== a) o.style.clipPath = 'inset(50%)'; } }).catch(() => {});
+      this.playAction(b);
+    };
+    this.slideT = setTimeout(() => { if (token === this.slideToken) { if (!started) { started = true; this.playAction(b); } this.endSlide(); } }, Component.SLIDE_MS + 50);
+    requestAnimationFrame(() => requestAnimationFrame(start));
+    setTimeout(start, 32);
+  }
+  playAction(i) {
+    const body = this.cardEl(i) && this.cardEl(i).querySelector('[data-card-body]'); if (!body) return;
+    const T = Component.SLIDE_MS / 720, ms = v => Math.round(v * T);
+    this.stopAnims(true);
+    this.runSeq(i, 1); return;
+    const anims = this.anims = [];
+    body.querySelectorAll('svg path').forEach(p => {
+      let len = 0; try { len = p.getTotalLength(); } catch (e) { return; }
+      if (!len) return;
+      const an = p.animate([{ strokeDasharray: len, strokeDashoffset: len }, { strokeDasharray: len, strokeDashoffset: 0 }], { duration: ms(400), easing: 'ease-out', fill: 'forwards' });
+      an.finished.then(() => { p.style.strokeDasharray = ''; p.style.strokeDashoffset = ''; an.cancel(); }).catch(() => {});
+      anims.push(an);
+    });
+    const big = body.querySelector('[data-big]'); if (big) this.countUp(big, false, false, ms(650));
+    if (i === 1 || i === 2) this.runSvc(0, 480, 120, i);
+    if (i === 3) this.runToggles(body, false);
+  }
+  runToggles(body, slow, start) {
+    const tg = body.querySelectorAll('[data-toggle]'), t0 = start === undefined ? 300 : start, sp = Component.SEQ_SPEED, gap = Math.round((slow ? 450 : 320) * sp), tr = Math.round((slow ? 320 : 260) * sp);
+    tg.forEach(t => { t.style.transitionDuration = tr + 'ms'; const k = t.querySelector('[data-knob]'); if (k) k.style.transitionDuration = tr + 'ms'; });
+    tg.forEach((t, n) => this.seqTimers.push(setTimeout(() => this.setToggle(t, true), t0 + n * gap)));
+    this.seqTimers.push(setTimeout(() => { const btn = body.querySelector('[data-publish]'); if (btn) { btn.style.transition = 'opacity 300ms ease'; btn.style.opacity = '1'; } }, t0 + (tg.length - 1) * gap + Math.round(400 * sp)));
+  }
+  setSvc(stage, idx) {
+    const c = this.cardEl(idx === undefined ? 1 : idx); if (!c) return;
+    const fills = c.querySelectorAll('[data-seg-fill]'), labs = c.querySelectorAll('[data-step-label]');
+    const instant = stage === 'start';
+    fills.forEach((f, k) => {
+      const on = stage === 'end' ? k === 2 : stage === k;
+      if (instant) { f.getAnimations().forEach(an => an.cancel()); f.style.transition = 'none'; f.style.transform = 'scaleX(0)'; f.style.opacity = '0'; void f.offsetWidth; f.style.transition = 'opacity 200ms ease'; return; }
+      if (stage === 'end' && k === 2) { f.style.transform = 'scaleX(1)'; f.style.opacity = '1'; return; }
+      if (!on) f.style.opacity = '0';
+    });
+    labs.forEach((l, k) => {
+      const pill = stage === 'end' ? k === 2 : stage === k, ok = k === 2;
+      if (instant) l.style.transition = 'none';
+      l.style.fontWeight = pill ? 'var(--fw-bold)' : 'var(--fw-regular)';
+      l.style.background = pill ? (ok ? 'var(--c-ok-tint)' : 'var(--c-active-tint)') : 'transparent';
+      l.style.color = pill ? (ok ? 'var(--c-ok-text)' : 'var(--c-active-text)') : 'var(--c-surface-ink-2)';
+      if (instant) { void l.offsetWidth; l.style.transition = 'background-color 200ms ease, color 200ms ease'; }
+    });
+  }
+  runSvc(delay, segMs, gapMs, idx) {
+    if (idx === undefined) idx = 1;
+    const c = this.cardEl(idx); if (!c) return;
+    const fills = c.querySelectorAll('[data-seg-fill]');
+    this.setSvc('start', idx);
+    fills.forEach((f, k) => {
+      this.seqTimers.push(setTimeout(() => {
+        this.setSvc(k, idx);
+        f.style.transform = 'scaleX(1)'; f.style.opacity = '1';
+        this.anims.push(f.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: segMs, easing: 'ease-out' }));
+      }, delay + k * (segMs + gapMs)));
+    });
+    this.seqTimers.push(setTimeout(() => this.setSvc('end', idx), delay + 3 * segMs + 2 * gapMs));
+  }
+  seqEls(i) {
+    const c = this.cardEl(i); if (!c) return null;
+    const rows = [...c.querySelectorAll('[data-arow]')];
+    return { c, rows, lines: rows.map(r => [...r.querySelectorAll('[data-rline]')]), cells: rows.map(r => [...r.children].filter(x => !x.hasAttribute('data-rline'))),
+      checks: rows.map(r => r.querySelector('svg path')), label: c.querySelector('[data-alabel]'), big: c.querySelector('[data-big]'), pill: c.querySelector('[data-block="Status-Pill"]') };
+  }
+  setSeq(i, stage) {
+    const E = this.seqEls(i); if (!E) return;
+    const end = stage === 'end';
+    ((this.seqAnims || {})[i] || []).forEach(an => { try { an.cancel(); } catch (e) {} });
+    (this.seqAnims = this.seqAnims || {})[i] = [];
+    E.lines.flat().forEach(l => { l.style.transform = end ? 'scaleX(1)' : 'scaleX(0)'; });
+    E.cells.flat().forEach(x => { x.style.opacity = end ? '1' : '0'; x.style.transform = 'none'; });
+    E.checks.forEach(p => { if (!p) return; let len = 0; try { len = p.getTotalLength(); } catch (e) {} if (!len) return; p.style.strokeDasharray = len; p.style.strokeDashoffset = end ? 0 : len; });
+    [E.label, E.big, E.pill].forEach(x => { if (x) x.style.opacity = end ? '1' : '0'; });
+    if (E.big) { if (!E.big.dataset.target) E.big.dataset.target = (E.big.textContent || '').trim(); const sfx = (E.big.dataset.target.match(/^[\d.]+(.*)$/) || [, ''])[1]; E.big.textContent = end ? E.big.dataset.target : '0' + sfx; }
+    if (i === 1 || i === 2) this.setSvc(end ? 'end' : 'start', i);
+    if (i === 3) this.setToggles(end, end);
+  }
+  setAnk(stage) { this.setSeq(0, stage); }
+  runSeq(i, f) {
+    f = f * Component.SEQ_SPEED;
+    const E = this.seqEls(i); if (!E) return;
+    this.setSeq(i, 'start');
+    if (!this.anims) this.anims = [];
+    const A = this.seqAnims[i], t = v => Math.round(v * f);
+    const go = (el, kf, delay, dur) => { A.push(el.animate(kf, { delay, duration: dur, easing: 'ease-out', fill: 'backwards' })); };
+    const rowsAt = start => {
+      E.rows.forEach((r, n) => {
+        const t0 = start + t(n * 220);
+        E.lines[n].forEach(l => { l.style.transform = 'scaleX(1)'; go(l, [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], t0, t(260)); });
+        E.cells[n].forEach(x => { x.style.opacity = '1'; go(x, [{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'translateY(0)' }], t0, t(260)); });
+        const p = E.checks[n];
+        if (p) { let len = 0; try { len = p.getTotalLength(); } catch (e) {} if (len) { p.style.strokeDashoffset = 0; go(p, [{ strokeDashoffset: len }, { strokeDashoffset: 0 }], t0 + t(120), t(240)); } }
+      });
+      return E.rows.length ? start + t((E.rows.length - 1) * 220 + 260) : start;
+    };
+    const numberAt = start => {
+      if (E.label) { E.label.style.opacity = '1'; go(E.label, [{ opacity: 0 }, { opacity: 1 }], start, t(200)); }
+      if (E.big) { E.big.style.opacity = '1'; go(E.big, [{ opacity: 0 }, { opacity: 1 }], start, t(120)); this.seqTimers.push(setTimeout(() => { this.lastBig = null; this.countUp(E.big, false, false, t(650)); }, start)); }
+      return start + t(650);
+    };
+    const pillAt = start => { if (E.pill) { E.pill.style.opacity = '1'; go(E.pill, [{ opacity: 0 }, { opacity: 1 }], start, t(200)); } };
+    let tt = t(200);
+    if (i === 1 || i === 2) { this.runSvc(0, t(480), t(120), i); tt = t(3 * 480 + 2 * 120); }
+    tt = rowsAt(tt);
+    if (i === 3) { const n = E.c.querySelectorAll('[data-toggle]').length; this.runToggles(E.c.querySelector('[data-card-body]'), f > 1.1, tt); pillAt(tt + Math.round(((n - 1) * (f > 1.1 ? 450 : 320) + 700) * Component.SEQ_SPEED)); return; }
+    if (E.big) tt = numberAt(i === 0 ? t(900) : tt) + t(50);
+    pillAt(i === 0 ? t(1600) : tt);
+  }
+  setToggles(on, btnOn) {
+    const c = document.querySelector('[data-card="3"]'); if (!c) return;
+    c.querySelectorAll('[data-toggle]').forEach(t => this.setToggle(t, on));
+    const b = c.querySelector('[data-publish]'); if (b) b.style.opacity = (btnOn === undefined ? on : btnOn) ? '1' : '0.4';
+  }
+  setToggle(t, on) {
+    if (!on) { t.style.transitionDuration = '250ms'; const kk = t.querySelector('[data-knob]'); if (kk) kk.style.transitionDuration = '250ms'; }
+    t.setAttribute('data-on', on ? 'true' : 'false');
+    t.style.backgroundColor = on ? 'var(--c-ok)' : 'var(--c-surface-line)';
+    const k = t.querySelector('[data-knob]'); if (k) k.style.left = on ? 'calc(100% - max(16px, 3.2cqw) - max(2px, 0.4cqw))' : 'max(2px, 0.4cqw)';
+  }
+  stopJourneyIO() { if (this.jIO) { this.jIO.disconnect(); this.jIO = null; this.jDone = true; } }
+  setupKpi() {
+    const root = this.kpiRef.current || document.querySelector('[data-block="Kennzahlen.Raster"]'); if (!root || this.kpiIO) return;
+    root.querySelectorAll('[data-kpi-card]').forEach(card => { const t = card.querySelector('[data-kpi-delta-text]'); if (t) t.textContent = card.getAttribute('data-kpi-delta') || ''; });
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    root.querySelectorAll('[data-kpi-value]').forEach(v => { v.textContent = '0'; });
+    root.querySelectorAll('[data-kpi-fade]').forEach(f => { f.style.opacity = '0'; f.style.transform = 'translateY(8px)'; });
+    root.querySelectorAll('[data-kpi-delta-pill]').forEach(f => { f.style.opacity = '0'; f.style.transform = 'translateY(4px)'; });
+    this.kpiIO = new IntersectionObserver(entries => {
+      if (!entries.some(en => en.isIntersecting)) return;
+      this.kpiIO.disconnect();
+      root.querySelectorAll('[data-kpi-card]').forEach(card => {
+        const off = +card.getAttribute('data-kpi-card') * 150, cnt = 1000;
+        const v = card.querySelector('[data-kpi-value]'), target = parseInt(v.getAttribute('data-kpi-value'), 10);
+        setTimeout(() => {
+          const t0 = performance.now();
+          const tick = now => { const p = Math.min(1, (now - t0) / cnt), e = 1 - Math.pow(1 - p, 3); v.textContent = String(Math.round(target * e)); if (p < 1) requestAnimationFrame(tick); };
+          requestAnimationFrame(tick);
+        }, off);
+        const pl = card.querySelector('[data-kpi-delta-pill]');
+        if (pl) { const an = pl.animate([{ opacity: 0, transform: 'translateY(4px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 250, delay: off + cnt, easing: 'ease-out', fill: 'forwards' });
+          an.finished.then(() => { pl.style.opacity = '1'; pl.style.transform = 'none'; an.cancel(); }).catch(() => {}); }
+        card.querySelectorAll('[data-kpi-fade]').forEach(f => {
+          const an = f.animate([{ opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 450, delay: 300 + off, easing: 'ease-out', fill: 'forwards' });
+          an.finished.then(() => { f.style.opacity = '1'; f.style.transform = 'none'; an.cancel(); }).catch(() => {});
+        });
+      });
+    }, { threshold: 0.6, rootMargin: '0px 0px -10% 0px' });
+    this.kpiIO.observe(root);
+  }
+  playIn(i, slow) {
+    const root = this.visualRef.current || document.querySelector('[data-block="Journey.Visual"]'); if (!root) return;
+    const body = root.querySelector('[data-card="' + i + '"] [data-card-body]'); if (!body) return;
+    const soft = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.stopAnims();
+    if (i === 0) this.endIntro(body);
+    if (soft) this.setSeq(i, 'end'); else this.runSeq(i, slow ? 1.4 : 1);
+    return;
+    const anims = this.anims = [];
+    const rows = [];
+    Array.prototype.forEach.call(body.children, el => { if (el.tagName === 'UL') rows.push(...el.children); else rows.push(el); });
+    const total = slow ? 1100 : 520, stag = slow ? 80 : 40, cap = slow ? 440 : 220, draw = slow ? 400 : 200;
+    rows.forEach((el, n) => {
+      if (soft) { anims.push(el.animate([{ opacity: 0 }, { opacity: el.hasAttribute('data-publish') && i === 3 ? 1 : 1 }], { duration: 200, easing: 'ease-out' })); return; }
+      const to = el.hasAttribute('data-publish') ? 0.4 : 1;
+      const k = Math.min(n * stag, cap) / total, k2 = Math.min(1, k + (slow ? 520 : 260) / total);
+      anims.push(el.animate([
+        { opacity: 0, transform: 'translateY(10px)', offset: 0 },
+        { opacity: 0, transform: 'translateY(10px)', offset: k },
+        { opacity: to, transform: 'translateY(0)', offset: k2 },
+        { opacity: to, transform: 'translateY(0)', offset: 1 }
+      ], { duration: total, easing: 'ease-out' }));
+      el.querySelectorAll('svg path').forEach(p => {
+        let len = 0; try { len = p.getTotalLength(); } catch (e) { return; }
+        if (!len) return;
+        const d0 = Math.min(1, k2), d1 = Math.min(1, (k2 * total + draw) / (total + draw));
+        anims.push(p.animate([
+          { strokeDasharray: len, strokeDashoffset: len, offset: 0 },
+          { strokeDasharray: len, strokeDashoffset: len, offset: d0 * total / (total + draw) },
+          { strokeDasharray: len, strokeDashoffset: 0, offset: d1 },
+          { strokeDasharray: len, strokeDashoffset: 0, offset: 1 }
+        ], { duration: total + draw, easing: 'ease-out' }));
+      });
+    });
+    if (i === 0) this.endIntro(body);
+    const big = body.querySelector('[data-big]'); if (big) this.countUp(big, soft, slow);
+    if (i === 1 || i === 2) { if (soft) this.setSvc('end', i); else this.runSvc(Math.min(2 * stag, cap), slow ? 700 : 480, slow ? 160 : 120, i); }
+    if (i === 3) {
+      if (soft) this.setToggles(true, true);
+      else this.runToggles(body, slow);
+    }
+    const done = () => this.repaint(body);
+    Promise.all(anims.map(an => an.finished.catch(() => {}))).then(done);
+    this.safety = setTimeout(() => { (this.anims || []).forEach(an => { try { an.cancel(); } catch (e) {} }); this.anims = []; done(); }, slow ? 2400 : 1200);
+  }
+  repaint(body) {
+    if (!body || !body.isConnected) return;
+    body.style.display = 'none'; void body.offsetHeight; body.style.display = '';
+  }
+  stopAnims(keepToggles) {
+    clearTimeout(this.safety);
+    (this.anims || []).forEach(an => { try { an.cancel(); } catch (e) {} });
+    this.anims = [];
+    this.countToken = (this.countToken || 0) + 1;
+    (this.seqTimers || []).forEach(clearTimeout); this.seqTimers = [];
+    if (!keepToggles) [0, 1, 2, 3, 4].forEach(k => this.setSeq(k, 'start'));
+    if (keepToggles) document.querySelectorAll('[data-big]').forEach(el => { if (el.dataset.target && el.style.opacity !== '0') el.textContent = el.dataset.target; });
+  }
+  countUp(el, soft, slow, dur) {
+    if (!el.dataset.target) el.dataset.target = (el.textContent || '').trim();
+    const txt = el.dataset.target, m = txt.match(/^([\d.]+)(.*)$/); if (!m || /^,/.test(m[2])) { el.textContent = txt; this.lastBig = null; return; }
+    const target = parseInt(m[1].replace(/\./g, ''), 10), suffix = m[2];
+    const prev = this.lastBig, from = prev && prev.suffix === suffix ? prev.value : 0;
+    this.lastBig = { value: target, suffix };
+    if (soft || from === target) { el.textContent = txt; return; }
+    const t0 = performance.now(), token = this.countToken;
+    const tick = now => {
+      if (token !== this.countToken) return;
+      const p = Math.min(1, (now - t0) / (dur || (slow ? 1400 : 700))), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(from + (target - from) * e).toLocaleString('de-DE') + suffix;
+      if (p < 1) requestAnimationFrame(tick); else el.textContent = txt;
+    };
+    requestAnimationFrame(tick);
+    const d = dur || (slow ? 1400 : 700); (this.seqTimers = this.seqTimers || []).push(setTimeout(() => { if (token === this.countToken) el.textContent = txt; }, d + 60));
+  }
+  centerRail(i) {
+    const r = this.railRef.current; if (!r) return;
+    const b = r.querySelectorAll('[data-rail-item]')[i]; if (!b) return;
+    const rr = r.getBoundingClientRect(), br = b.getBoundingClientRect();
+    r.scrollTo({ left: r.scrollLeft + (br.left - rr.left) + br.width / 2 - rr.width / 2, behavior: this.reducedMotion() ? 'auto' : 'smooth' });
+  }
+  revealVisual() {
+    const v = this.visualRef.current; if (!v) return;
+    const cs = getComputedStyle(document.documentElement);
+    const top0 = (parseFloat(cs.getPropertyValue('--h-header')) || 64) + (parseFloat(cs.getPropertyValue('--sp-24')) || 24);
+    const r = v.getBoundingClientRect(), vh = window.innerHeight;
+    let dy = 0;
+    if (r.top < top0) dy = r.top - top0;
+    else if (r.bottom > vh) dy = Math.min(r.bottom - vh, r.top - top0);
+    if (Math.abs(dy) < 1) return;
+    window.scrollTo({ top: window.scrollY + dy, behavior: this.reducedMotion() ? 'auto' : 'smooth' });
+  }
+  scrollToRail() {
+    if (!window.matchMedia('(max-width: 900px)').matches) { this.revealVisual(); return; }
+    const r = this.railRef.current; if (!r) return;
+    const cs = getComputedStyle(document.documentElement);
+    const h = parseFloat(cs.getPropertyValue('--h-header')) || 64, g = parseFloat(cs.getPropertyValue('--sp-24')) || 24;
+    window.scrollTo({ top: r.getBoundingClientRect().top + window.scrollY - h - g, behavior: this.reducedMotion() ? 'auto' : 'smooth' });
+  }
+  go(i) {
+    if (i === this.state.active) return;
+    requestAnimationFrame(() => { this.centerRail(i); this.scrollToRail(); });
+    if (this.jIO) this.stopJourneyIO();
+    this.endIntro();
+    clearTimeout(this.ft);
+    const from = this.state.active;
+    if (from < 5 && i < 5 && !this.reducedMotion()) { this.slide(from, i); return; }
+    this.endSlide();
+    const ic = this.cardEl(i); if (ic) ic.style.clipPath = '';
+    const wasVis = this.state.shown < 5;
+    const play = () => { clearTimeout(this.pt); this.pt = setTimeout(() => this.playIn(i), 170); };
+    this.setState({ active: i, fading: true });
+    if (i < 5 && wasVis) play();
+    this.ft = setTimeout(() => { this.setState({ shown: i, fading: false }); if (i < 5 && !wasVis) play(); }, 150);
+  }
+  renderVals() {
+    const railRef = this.railRef;
+    const stations = Component.STATIONS.map((st, i) => ({
+      name: st.name, shot: st.shot, text: st.text,
+      chips: st.chips.map(label => ({ label, check: !st.noCheck })),
+      op: i === this.state.active ? 1 : 0.5, fw: i === this.state.active ? 'var(--fw-bold)' : 'var(--fw-regular)', active: i === this.state.active ? 'true' : 'false', border: i === this.state.active ? 'var(--c-on-dark)' : 'transparent',
+      current: i === this.state.active ? 'step' : 'false',
+      num: String(i + 1).padStart(2, '0'), numColor: i === this.state.active ? 'var(--c-on-dark)' : 'var(--c-on-dark-2)',
+      select: () => this.go(i),
+    }));
+    const a = this.state.active, vis = i => i < 5;
+    const sf = this.slideFrom, soft = this.reducedMotion();
+    const card = i => { const on = i === a || i === sf; return { op: i === a ? 1 : 0, vis: i === a ? 'visible' : 'hidden', mop: on ? 1 : 0, mvis: on ? 'visible' : 'hidden', mtr: typeof sf === 'number' ? 'none' : (soft ? 'opacity 200ms ease, visibility 200ms ease' : 'opacity var(--t-fade), visibility var(--t-fade)') }; };
+    // copyright: Footer-Jahr, aktualisiert sich selbst
+    return { copyright: '© ' + new Date().getFullYear() + ' Circlaris', railRef, pfeilRef: this.pfeilRef,
+      visualRef: this.visualRef, kpiRef: this.kpiRef, intro0: this.state.jIntro ? 0 : 1, card0: card(0), card1: card(1), card2: card(2), card3: card(3), card4: card(4),
+      hasVisual: vis(this.state.shown), noVisual: !vis(this.state.shown),
+      colFade: this.state.fading && vis(a) !== vis(this.state.shown) ? 0 : 1,
+      nextLabel: a === Component.STATIONS.length - 1 ? 'Von vorn: ' + Component.STATIONS[0].name : 'Weiter: ' + Component.STATIONS[a + 1].name,
+      goNext: () => this.go(a === Component.STATIONS.length - 1 ? 0 : a + 1),
+      stations, cur: stations[this.state.shown], fade: this.state.fading ? 0 : 1,
+      menuOpen: this.state.menuOpen, menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+    };
+  }
+}
+</script>
+
+
+</body></html>
