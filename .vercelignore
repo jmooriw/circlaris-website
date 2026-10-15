@@ -1,0 +1,8 @@
+# Nicht mit ausliefern: Die Website wird direkt aus der Projektwurzel bedient.
+.env*
+.vercel
+.git
+.gitignore
+.vercelignore
+README.md
+CLAUDE.md

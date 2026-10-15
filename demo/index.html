@@ -75,14 +75,11 @@
     <div data-block="Demo.Karte" style="order: var(--demo-o-card); min-width: 0; background: var(--c-accent); border: 0; border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: var(--demo-card-pad);">
       <div data-block="Demo.Karte.Inhalt" aria-live="polite">
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-          <h3 style="margin: 0; color: var(--c-on-dark);">Danke für Ihre Anfrage</h3>
-          <p style="font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-on-dark); margin: var(--sp-16) 0 0;">Wir melden uns {{ replyTime }} mit Terminvorschlägen.</p>
+          <h3 style="margin: 0; color: var(--c-on-dark);">Vielen Dank.</h3>
+          <p style="font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-on-dark); margin: var(--sp-16) 0 0;">Wir melden uns in Kürze mit Terminvorschlägen.</p>
         </sc-if>
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
           <h3 style="margin: 0 0 var(--sp-24); color: var(--c-on-dark);">Demo anfragen</h3>
-          <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
-            <p role="alert" style="font-size: var(--fs-small); color: var(--c-error-on-dark); margin: 0 0 var(--sp-24);">Das hat nicht geklappt. Schreiben Sie uns direkt an <a href="{{ mailto }}" style="color: var(--c-error-on-dark); text-decoration: underline;">{{ contactEmail }}</a>.</p>
-          </sc-if>
           <form id="demo-form" sc-camel-no-validate="{{ true }}" ref="{{ formRef }}" sc-camel-on-submit="{{ submit }}" style="position: relative; margin: 0;">
             <div style="display: grid; grid-template-columns: var(--demo-form-cols); gap: var(--sp-16);">
                 <label style="display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0;">
@@ -113,6 +110,9 @@
             <div style="display: flex; margin-top: var(--sp-24);">
               <button type="submit" data-block="Button" disabled="{{ sending }}" style="width: var(--demo-btn-w); text-align: center; background: var(--c-on-dark); color: var(--c-accent); border: 1px solid var(--c-on-dark); border-radius: var(--r-pill); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); white-space: nowrap; cursor: pointer; transition: background var(--t-fade); padding: var(--sp-8) var(--sp-24); opacity: {{ btnOpacity }};" style-hover="background: color-mix(in srgb, var(--c-bg) 92%, var(--c-ink));" style-focus-visible="outline: 2px solid var(--c-on-dark); outline-offset: 2px;">{{ btnLabel }}</button>
             </div>
+            <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
+              <p role="alert" style="font-size: var(--fs-small); color: var(--c-error-on-dark); margin: var(--sp-16) 0 0;">Das hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie an <a href="{{ mailto }}" style="color: var(--c-error-on-dark); text-decoration: underline;">{{ contactEmail }}</a>.</p>
+            </sc-if>
             <p style="font-size: var(--fs-small); line-height: var(--lh-body); color: var(--c-on-dark-2); margin: var(--sp-16) 0 0; text-wrap: pretty;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung der Anfrage zu. Details in der <a href="/datenschutz" style="color: var(--c-on-dark); text-decoration: underline;">Datenschutzerklärung</a>.</p>
           </form>
         </sc-if>
@@ -137,8 +137,6 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script="">
 class Component extends DCLogic {
-  // Unter Vorbehalt – hier zentral austauschbar
-  static REPLY_TIME = 'innerhalb eines Werktags';
   static CONTACT_EMAIL = 'hello@circlaris.com';
   state = { menuOpen: false, errors: {}, sending: false, sent: false, failed: false };
   formRef = React.createRef();
@@ -162,7 +160,8 @@ class Component extends DCLogic {
     this.setState({ errors: {}, sending: true, failed: false });
     try {
       const res = await fetch('/api/demo', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(v) });
-      if (res.status !== 200) throw new Error(String(res.status));
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data || data.ok !== true) throw new Error(String(res.status));
       this.setState({ sending: false, sent: true });
     } catch (e) {
       this.setState({ sending: false, failed: true });
@@ -178,7 +177,7 @@ class Component extends DCLogic {
     return {
       copyright: '© ' + new Date().getFullYear() + ' Circlaris', // Footer-Jahr, aktualisiert sich selbst
       ...out,
-      replyTime: C.REPLY_TIME, contactEmail: C.CONTACT_EMAIL, mailto: 'mailto:' + C.CONTACT_EMAIL,
+      contactEmail: C.CONTACT_EMAIL, mailto: 'mailto:' + C.CONTACT_EMAIL,
       formRef: this.formRef, submit: this.submit,
       sent: this.state.sent, notSent: !this.state.sent, failed: this.state.failed,
       sending: this.state.sending, btnLabel: this.state.sending ? 'Wird gesendet …' : 'Demo anfragen', btnOpacity: this.state.sending ? 0.6 : 1,

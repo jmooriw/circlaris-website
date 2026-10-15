@@ -27,3 +27,11 @@ Statische Website auf Vercel. Struktur und lokaler Test: siehe README.md.
 - Navigation und Footer sind in allen vier Seiten identisch. Eine Änderung dort in allen vier Dateien gleich vornehmen.
 - Nach Änderungen alle vier Seiten bei 1440 px und 390 px Breite ansehen, lokal mit `vercel dev`.
 - Das Demo-Formular sendet an `/api/demo`. Feldnamen (`name`, `email`, `company`, `phone`, `current`, `website`) in Formular und Funktion nur gemeinsam ändern.
+
+## Demo-Anfrage
+
+- Ablauf: Formular auf `/demo` → `fetch` mit JSON an `POST /api/demo` (`api/demo.js`) → MailerSend-API (`https://api.mailersend.com/v1/email`) → E-Mail an das Team.
+- In Vercel (Production und Preview) müssen gesetzt sein: `MAILERSEND_TOKEN`, `DEMO_FROM`, `DEMO_TO`. Vorlage ohne Werte: `.env.example`. Fehlt eine Variable, antwortet die Funktion mit 500 und nennt die fehlende Variable nur im Log.
+- Verifizierte Versanddomain in MailerSend ist `circlaris.de`; `DEMO_FROM` muss eine Adresse dieser Domain sein. Ziel der Anfragen ist `hello@circlaris.com` (`DEMO_TO`). Antworten gehen per `reply_to` direkt an die anfragende Person.
+- Der MailerSend-Token gehört niemals ins Repository, auch nicht in `.env.example`, README oder Kommentare. `.env` und `.env.local` sind in `.gitignore`.
+- Ein Wechsel des Mail-Anbieters erfordert eine Anpassung der Datenschutzerklärung (Abschnitt 2.2).

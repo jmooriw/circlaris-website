@@ -18,7 +18,7 @@ Statische Website von Circlaris mit einer Serverfunktion für das Demo-Formular.
 │       ├── dc-runtime.js             Laufzeit, die die Seitenvorlagen rendert (aus Claude Design)
 │       ├── react.production.min.js   React 18.3.1 (UMD), lokal statt CDN
 │       └── react-dom.production.min.js
-├── api/demo.js             Vercel-Serverfunktion: Demo-Anfrage per Resend versenden
+├── api/demo.js             Vercel-Serverfunktion: Demo-Anfrage per MailerSend versenden
 ├── vercel.json             cleanUrls, keine abschließenden Schrägstriche
 └── CLAUDE.md               Regeln für spätere Änderungen
 ```
@@ -40,29 +40,23 @@ Alle Schriften, Bilder und Skripte werden von der eigenen Domain geladen. Es gib
 | `current` | nein    | „Was nutzen Sie heute für Ankauf und Verkauf?“    |
 | `website` | –       | Honeypot. Ist es gefüllt, antwortet die Funktion mit 200 und versendet nichts. |
 
-Antworten: `200 {"ok":true}`, `400 {"error":"invalid"}` (Pflichtfeld fehlt oder E-Mail ungültig), `500 {"error":"config"}` (Umgebungsvariable fehlt), `502 {"error":"mail"}` (Resend hat abgelehnt oder ist nicht erreichbar). Andere Methoden als POST erhalten `405`.
+Antworten: `200 {"ok":true}`, `400 {"ok":false,"error":"…"}` (Pflichtfeld fehlt oder E-Mail ungültig), `405` für andere Methoden als POST, `500 {"ok":false}` (Umgebungsvariable fehlt, Details nur im Log), `502 {"ok":false}` (MailerSend hat abgelehnt oder ist nicht erreichbar; Status und Antwort stehen im Log).
 
-Die E-Mail ist Klartext mit einer Zeile pro Feld und einem Zeitstempel in Europe/Berlin. Betreff: `Demo-Anfrage: <Unternehmen>`.
+Die E-Mail enthält alle Felder und einen Zeitstempel in Europe/Berlin, als Text (eine Zeile pro Feld) und als HTML-Tabelle. Betreff: `Demo-Anfrage von <Name>, <Unternehmen>`. `reply_to` ist die Adresse aus dem Formular.
 
 ### Umgebungsvariablen
 
-In Vercel unter *Project → Settings → Environment Variables* anlegen (Production und Preview):
+In Vercel unter *Project → Settings → Environment Variables* anlegen (Production und Preview). Vorlage ohne Werte: `.env.example`.
 
-| Variable         | Beispiel                                   | Zweck |
-|------------------|--------------------------------------------|-------|
-| `RESEND_API_KEY` | `re_…`                                     | API-Schlüssel aus dem Resend-Dashboard (nur Sendeberechtigung genügt) |
-| `DEMO_FROM`      | `Circlaris Website <website@circlaris.com>` | Absender. Die Domain muss in Resend verifiziert sein. |
-| `DEMO_TO`        | `hello@circlaris.com`                      | Empfänger. Mehrere Adressen durch Komma trennen. |
+| Variable           | Beispiel                  | Zweck |
+|--------------------|---------------------------|-------|
+| `MAILERSEND_TOKEN` | `mlsn.…`                  | API-Token aus MailerSend (Berechtigung „Email: Full access“ genügt) |
+| `DEMO_FROM`        | `website@circlaris.de`    | Absenderadresse. Muss zur verifizierten Domain `circlaris.de` gehören. Der Anzeigename „Circlaris Website“ ist im Code gesetzt. |
+| `DEMO_TO`          | `hello@circlaris.com`     | Empfänger |
 
-### Resend-Domain
+### MailerSend-Domain
 
-Resend versendet nur von verifizierten Domains. Vor dem Livegang:
-
-1. In Resend unter *Domains* die Domain `circlaris.com` (oder eine Subdomain wie `mail.circlaris.com`) hinzufügen.
-2. Die angezeigten DNS-Einträge (SPF/MX und DKIM, optional DMARC) beim DNS-Anbieter setzen und warten, bis Resend sie als *Verified* anzeigt.
-3. `DEMO_FROM` muss eine Adresse genau dieser Domain verwenden.
-
-Ohne verifizierte Domain klappt nur der Testabsender `onboarding@resend.dev`, und der darf nur an die E-Mail-Adresse des Resend-Kontos senden.
+MailerSend versendet nur von verifizierten Domains. Verifiziert ist `circlaris.de` (SPF, DKIM, Return-Path im DNS). `DEMO_FROM` muss eine Adresse dieser Domain sein.
 
 ## Lokal testen
 
@@ -94,7 +88,7 @@ Formular per Kommandozeile testen:
 curl -i -X POST http://localhost:3000/api/demo -H 'Content-Type: application/json' -d '{"name":"Test","email":"test@example.com","company":"Testfirma","phone":"","current":"Excel","website":""}'
 ```
 
-`.env.local` und `.vercel/` sind in `.gitignore` eingetragen und gehören nicht ins Repository.
+`.env`, `.env.local` und `.vercel/` sind in `.gitignore` eingetragen und gehören nicht ins Repository.
 
 ## Deployment
 
