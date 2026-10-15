@@ -61,7 +61,7 @@
           <a data-block="Button" data-variant="ghost" href="#ablauf" style="display: inline-block; text-align: center; background: transparent; color: var(--c-accent); border: 1px solid var(--c-accent); border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: var(--fw-bold); text-decoration: none; white-space: nowrap; padding: var(--sp-16) var(--sp-32); transition: background var(--t-fade);" style-hover="background: var(--c-accent-tint); color: var(--c-accent);">So funktioniert es</a>
         </div>
       </div>
-      <div data-block="Screenshot" style="order: 2; margin-top: var(--hero-img-mt); min-width: 0; background: var(--c-fill); border: 1px solid var(--c-line); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; color: var(--c-ink-2); padding: var(--sp-24); aspect-ratio: var(--hero-ratio);"><svg aria-label="Bild" role="img" width="48" height="48" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="1.75"></circle><path d="M21 16l-5-5-9 9"></path></svg></div>
+      <div data-block="Screenshot" ref="{{ heroRef }}" style="position: relative; order: 2; margin-top: var(--hero-img-mt); min-width: 0; width: var(--hero-shot-w); justify-self: center; margin-left: auto; margin-right: auto; background: var(--c-accent); border: 1px solid var(--c-line); border-radius: var(--r-lg); display: flex; align-items: center; justify-content: center; padding: var(--sp-24); aspect-ratio: var(--hero-ratio); overflow: visible;"><img src="/assets/hero-uhr-schmuck.webp" alt="Gebrauchte Taucheruhr mit Edelstahlband, davor ein Goldring mit Solitär und goldene Creolen" width="1254" height="1254" fetchpriority="high" style="display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.18));"><div data-block="Hero.KarteA" aria-hidden="{{ heroAHidden }}" style="position: absolute; left: var(--hero-ka-x); top: var(--hero-k-y); z-index: 2; max-width: var(--hero-card-w); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); color: var(--c-ink); padding: var(--sp-16) var(--sp-24); display: flex; flex-direction: column; gap: var(--sp-4); opacity: {{ heroAOp }}; transform: {{ heroATf }}; transition: {{ heroATr }};"><div style="display: flex; align-items: center; gap: var(--sp-8); font-size: var(--hero-card-fs1); font-weight: var(--fw-bold); line-height: 1.3;" data-hk-row=""><span>Ankaufsvertrag</span></div><div data-hk-row="" style="display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-tag); line-height: 1.35; color: var(--c-surface-ink-2);"><svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: calc((1.35em - 14px) / 2);"><path data-hk-check="" d="M2.5 7.4l3 3L11.5 4"></path></svg><span>Digital unterschrieben</span></div></div><div data-block="Hero.KarteC" aria-hidden="{{ heroCHidden }}" style="position: absolute; right: var(--hero-ka-x); top: var(--hero-k-y); z-index: 2; max-width: var(--hero-card-w); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); color: var(--c-ink); padding: var(--sp-16) var(--sp-24); display: flex; flex-direction: column; gap: var(--sp-4); opacity: {{ heroCOp }}; transform: {{ heroCTf }}; transition: {{ heroCTr }};"><div style="display: flex; align-items: center; gap: var(--sp-8); font-size: var(--hero-card-fs1); font-weight: var(--fw-bold); line-height: 1.3;" data-hk-row=""><span>Service</span></div><div data-block="Status-Balken" aria-hidden="true" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: var(--sp-12); margin-bottom: var(--sp-8);"><span style="position: relative; display: block; height: 4px; border-radius: 2px; overflow: hidden; background: var(--c-surface-line);"><span data-hk-seg="" style="position: absolute; inset: 0; background: var(--c-active); transform-origin: left center; transform: {{ heroSegTf }};"></span></span><span style="position: relative; display: block; height: 4px; border-radius: 2px; overflow: hidden; background: var(--c-surface-line);"><span data-hk-seg="" style="position: absolute; inset: 0; background: var(--c-active); transform-origin: left center; transform: {{ heroSegTf }};"></span></span><span style="position: relative; display: block; height: 4px; border-radius: 2px; overflow: hidden; background: var(--c-surface-line);"><span data-hk-seg="" style="position: absolute; inset: 0; background: var(--c-ok); transform-origin: left center; transform: {{ heroSegTf }};"></span></span></div><div data-hk-row="" style="display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-tag); line-height: 1.35; color: var(--c-surface-ink-2);"><svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: calc((1.35em - 14px) / 2);"><path data-hk-check="" d="M2.5 7.4l3 3L11.5 4"></path></svg><span>Revision erledigt</span></div></div><div data-block="Hero.KarteD" aria-hidden="{{ heroDHidden }}" style="position: absolute; right: var(--hero-ka-x); bottom: var(--hero-k-y); z-index: 2; max-width: var(--hero-card-w); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); color: var(--c-ink); padding: var(--sp-16) var(--sp-24); display: flex; flex-direction: column; gap: var(--sp-4); opacity: {{ heroDOp }}; transform: {{ heroDTf }}; transition: {{ heroDTr }};"><div style="display: flex; align-items: center; gap: var(--sp-8); font-size: var(--hero-card-fs1); font-weight: var(--fw-bold); line-height: 1.3;" data-hk-row=""><span>Inserat</span></div><div data-hk-row="" style="display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-tag); line-height: 1.35; color: var(--c-surface-ink-2);"><svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: calc((1.35em - 14px) / 2);"><path data-hk-check="" d="M2.5 7.4l3 3L11.5 4"></path></svg><span>Auf 6 Plattformen veröffentlicht</span></div></div><div data-block="Hero.KarteB" aria-hidden="{{ heroBHidden }}" style="position: absolute; left: var(--hero-ka-x); bottom: var(--hero-k-y); z-index: 2; max-width: var(--hero-card-w); background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); color: var(--c-ink); padding: var(--sp-16) var(--sp-24); display: flex; flex-direction: column; gap: var(--sp-4); opacity: {{ heroBOp }}; transform: {{ heroBTf }}; transition: {{ heroBTr }};"><div style="display: flex; align-items: center; gap: var(--sp-8); font-size: var(--hero-card-fs1); font-weight: var(--fw-bold); line-height: 1.3;" data-hk-row=""><span>Verkauft</span></div><div data-hk-row="" style="display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-tag); line-height: 1.35; color: var(--c-surface-ink-2);"><svg width="14" height="14" sc-camel-view-box="0 0 14 14" fill="none" stroke="var(--c-ok-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto; margin-top: calc((1.35em - 14px) / 2);"><path data-hk-check="" d="M2.5 7.4l3 3L11.5 4"></path></svg><span>Rechnung und Lieferschein erstellt</span></div></div></div>
     </div>
   </section>
 
@@ -226,7 +226,7 @@
           </div>
         </div>
         <figure data-block="Person" style="margin: 0; min-width: 0; order: 1; width: 100%; max-width: var(--person-photo-w); justify-self: var(--person-photo-js);">
-          <div data-block="Portrait" style="width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden; background: color-mix(in srgb, var(--c-on-dark) 10%, transparent);"><img src="/assets/kontakt-hansmann.jpg" alt="Dr. Thomas Hansmann" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;"></div>
+          <div data-block="Portrait" style="width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden; background: color-mix(in srgb, var(--c-on-dark) 10%, transparent);"><img src="/assets/kontakt-hansmann.webp" alt="Dr. Thomas Hansmann" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;"></div>
           <figcaption style="margin-top: var(--sp-16);">
             <div style="font-size: var(--fs-text); font-weight: var(--fw-bold); color: var(--c-on-dark);">Dr. Thomas Hansmann</div>
             <div style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Geschäftsführer</div>
@@ -291,8 +291,47 @@ class Component extends DCLogic {
     { name: 'Verkauf', chips: ['E-Rechnung', 'Rechnung DE/EN', 'Wertkurier nach Wahl'], shot: 'Ausschnitt: Rechnung mit Auslandshinweis und Versandauftrag',
       text: 'Ob im Geschäft, auf der Messe oder über einen Marktplatz: Der Verkauf erzeugt Rechnung und Lieferschein, die passende Umsatzsteuerregelung ist bereits zugeordnet. Auf Wunsch erstellt Circlaris das Versandlabel automatisch und verfolgt die Sendung. Der Steuerberater bekommt alles mit einem Klick.' },
   ];
-  componentWillUnmount() { window.removeEventListener('resize', this.placePfeil); clearTimeout(this.ft); clearTimeout(this.pt); this.stopAnims(); if (this.kpiIO) this.kpiIO.disconnect(); if (this.jIO) this.jIO.disconnect(); clearTimeout(this.slideT); }
-  componentDidMount() { this.setupKpi(); this.setupJourney(); requestAnimationFrame(this.placePfeil); if (document.fonts) document.fonts.ready.then(this.placePfeil); window.addEventListener('resize', this.placePfeil); }
+  componentWillUnmount() { clearTimeout(this.heroT); (this.heroAnims || []).forEach(a => a.cancel()); if (this.heroIO) this.heroIO.disconnect(); window.removeEventListener('resize', this.placePfeil); clearTimeout(this.ft); clearTimeout(this.pt); this.stopAnims(); if (this.kpiIO) this.kpiIO.disconnect(); if (this.jIO) this.jIO.disconnect(); clearTimeout(this.slideT); }
+  heroRef = React.createRef();
+  heroStatic() { return this.reducedMotion() || !!(window.matchMedia && window.matchMedia('(max-width: 960px)').matches) || !('IntersectionObserver' in window); }
+  setupHero() {
+    if (this.heroStatic()) { if (this.state.heroStage !== 'b') this.setState({ heroStage: 'b', heroInstant: true }); return; }
+    const el = this.heroRef.current; if (!el) return;
+    this.heroStarted = false;
+    this.heroIO = new IntersectionObserver(entries => {
+      const vis = entries.some(en => en.isIntersecting);
+      if (vis === this.heroVisible) return;
+      this.heroVisible = vis; clearTimeout(this.heroT);
+      if (!vis) return;
+      const st = this.state.heroStage;
+      if (!this.heroStarted) this.heroT = setTimeout(() => { this.heroStarted = true; this.setState({ heroStage: 'a' }); this.heroPlay('A'); this.heroNext(400 + 3200); }, 1800);
+      else if (st && st.indexOf('out') === 0) { const to = this.heroAfter(st.slice(3)); this.setState({ heroStage: to }); this.heroPlay(to.toUpperCase()); this.heroNext(this.heroStand(to)); }
+      else this.heroNext(this.heroStand(st) - 400);
+    }, { threshold: 0.4 });
+    this.heroIO.observe(el);
+  }
+  heroPlay(p) {
+    const card = document.querySelector('[data-block="Hero.Karte' + p + '"]'); if (!card || !card.animate) return;
+    (this.heroAnims || []).forEach(a => a.cancel());
+    const rows = card.querySelectorAll('[data-hk-row]'), path = card.querySelector('[data-hk-check]'), out = [];
+    const segs = card.querySelectorAll('[data-hk-seg]'), r2d = segs.length ? 120 + 200 + segs.length * 260 + (segs.length - 1) * 80 : 220;
+    segs.forEach((g, i) => out.push(g.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 260, delay: 320 + i * 340, easing: 'ease-out', fill: 'backwards' })));
+    [120, r2d].forEach((d, i) => rows[i] && out.push(rows[i].animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 320, delay: d, easing: 'ease-out', fill: 'backwards' })));
+    if (path && path.getTotalLength) { const L = path.getTotalLength(); out.push(path.animate([{ strokeDasharray: L, strokeDashoffset: L }, { strokeDasharray: L, strokeDashoffset: 0 }], { duration: 260, delay: r2d + 160, easing: 'ease-out', fill: 'backwards' })); }
+    this.heroAnims = out;
+  }
+  heroStand(k) { return 400 + 3200; }
+  heroAfter(k) { const o = ['a', 'c', 'd', 'b']; return o[(o.indexOf(k) + 1) % 4]; }
+  heroNext(wait) {
+    clearTimeout(this.heroT);
+    this.heroT = setTimeout(() => {
+      if (!this.heroVisible) return;
+      const from = this.state.heroStage, to = this.heroAfter(from);
+      this.setState({ heroStage: 'out' + from });
+      this.heroT = setTimeout(() => { this.setState({ heroStage: to }); this.heroPlay(to.toUpperCase()); this.heroNext(this.heroStand(to)); }, 300 + 150);
+    }, wait);
+  }
+  componentDidMount() { this.setupHero(); this.setupKpi(); this.setupJourney(); requestAnimationFrame(this.placePfeil); if (document.fonts) document.fonts.ready.then(this.placePfeil); window.addEventListener('resize', this.placePfeil); }
   setupJourney() {
     const root = this.visualRef.current || document.querySelector('[data-block="Journey.Visual"]'); if (!root || this.jIO) return;
     const body = root.querySelector('[data-card="0"] [data-card-body]');
@@ -629,6 +668,11 @@ class Component extends DCLogic {
     this.ft = setTimeout(() => { this.setState({ shown: i, fading: false }); if (i < 5 && !wasVis) play(); }, 150);
   }
   renderVals() {
+    const hs = this.state.heroStage || (typeof window !== 'undefined' && this.heroStatic() ? 'b' : 'none'), hi = !!this.state.heroInstant || hs === 'b' && !this.state.heroStage;
+    const heroVals = { heroRef: this.heroRef, heroSegTf: 'scaleX(1)' };
+    ['a', 'c', 'd', 'b'].forEach(k => { const P = k.toUpperCase(), on = hs === k;
+      heroVals['hero' + P + 'Op'] = on ? 1 : 0; heroVals['hero' + P + 'Tf'] = on ? 'none' : 'translateY(8px)'; heroVals['hero' + P + 'Hidden'] = on ? 'false' : 'true';
+      heroVals['hero' + P + 'Tr'] = hi ? 'none' : (on ? 'opacity 400ms ease-out, transform 400ms ease-out' : 'opacity 300ms ease-in, transform 300ms ease-in'); });
     const railRef = this.railRef;
     const stations = Component.STATIONS.map((st, i) => ({
       name: st.name, shot: st.shot, text: st.text,
@@ -642,7 +686,7 @@ class Component extends DCLogic {
     const sf = this.slideFrom, soft = this.reducedMotion();
     const card = i => { const on = i === a || i === sf; return { op: i === a ? 1 : 0, vis: i === a ? 'visible' : 'hidden', mop: on ? 1 : 0, mvis: on ? 'visible' : 'hidden', mtr: typeof sf === 'number' ? 'none' : (soft ? 'opacity 200ms ease, visibility 200ms ease' : 'opacity var(--t-fade), visibility var(--t-fade)') }; };
     // copyright: Footer-Jahr, aktualisiert sich selbst
-    return { copyright: '© ' + new Date().getFullYear() + ' Circlaris', railRef, pfeilRef: this.pfeilRef,
+    return { copyright: '© ' + new Date().getFullYear() + ' Circlaris', ...heroVals, railRef, pfeilRef: this.pfeilRef,
       visualRef: this.visualRef, kpiRef: this.kpiRef, intro0: this.state.jIntro ? 0 : 1, card0: card(0), card1: card(1), card2: card(2), card3: card(3), card4: card(4),
       hasVisual: vis(this.state.shown), noVisual: !vis(this.state.shown),
       colFade: this.state.fading && vis(a) !== vis(this.state.shown) ? 0 : 1,

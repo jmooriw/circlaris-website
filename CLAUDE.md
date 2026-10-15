@@ -2,6 +2,8 @@
 
 Statische Website auf Vercel. Struktur und lokaler Test: siehe README.md.
 
+Der Übertrag aus Claude Design ist abgeschlossen, das Repository ist die einzige Quelle. `styleguide.html` zeigt Tokens und Komponenten, lädt `styles.css` und muss bei Änderungen daran nicht angepasst werden.
+
 ## Grundregeln
 
 - **Tokens nur in `styles.css`.** Farben, Schriften, Schriftgrößen, Abstände, Radien, Schatten und Breakpoint-Variablen werden ausschließlich im `:root` von `styles.css` definiert oder geändert. In den Seiten nur `var(--…)` verwenden, keine neuen Hex-Werte oder Pixelmaße für Dinge, die es als Token gibt. Seitenspezifische Layout-Schalter (z. B. `--demo-*` in `demo/index.html`) dürfen im `<style>` der jeweiligen Seite bleiben.

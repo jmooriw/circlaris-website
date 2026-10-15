@@ -60,7 +60,7 @@
   <section data-block="Demo" data-screen-label="Demo" id="demo" style="padding: var(--sp-section) 0; display: grid; grid-template-columns: var(--demo-cols); column-gap: var(--sp-64); row-gap: var(--sp-48); align-items: start;">
     <div style="min-width: 0; display: var(--demo-col-disp);">
       <figure data-block="Person" style="order: var(--demo-o-photo); margin: 0 0 var(--demo-photo-mb); min-width: 0; width: 100%; max-width: var(--person-photo-w);">
-        <div data-block="Portrait" style="width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden; background: var(--c-fill);"><img src="/assets/kontakt-hansmann.jpg" alt="Dr. Thomas Hansmann" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;"></div>
+        <div data-block="Portrait" style="width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden; background: var(--c-fill);"><img src="/assets/kontakt-hansmann.webp" alt="Dr. Thomas Hansmann" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%;"></div>
         <figcaption style="margin-top: var(--sp-16);">
           <div style="font-size: var(--fs-text); font-weight: var(--fw-bold); color: var(--c-ink);">Dr. Thomas Hansmann</div>
           <div style="font-size: var(--fs-small); color: var(--c-ink-2);">Geschäftsführer</div>
@@ -69,7 +69,7 @@
       <div style="order: var(--demo-o-text); min-width: 0;">
         <span data-block="Eyebrow" style="display: block; font-size: var(--fs-tag); font-weight: var(--fw-medium); letter-spacing: var(--ls-tag); text-transform: uppercase; color: var(--c-ink-2); margin-bottom: var(--sp-16);">Demo</span>
         <h1 style="text-wrap: balance; margin: 0;">Sehen Sie Circlaris an Ihrem eigenen Ablauf</h1>
-        <p style="font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-ink-2); max-width: var(--measure-text); margin: var(--sp-24) 0 0; text-wrap: pretty;">Dr. Thomas Hansmann zeigt Ihnen Circlaris am Bildschirm, in 30 Minuten und ohne Vorbereitung. Schreiben Sie uns kurz, wer Sie sind und was Sie heute für Ankauf, Bestand und Verkauf nutzen. Sie erhalten {{ replyTime }} Terminvorschläge.</p>
+        <p style="font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-ink-2); max-width: var(--measure-text); margin: var(--sp-24) 0 0; text-wrap: pretty;">Dr. Thomas Hansmann zeigt Ihnen Circlaris am Bildschirm, in 30 Minuten und ohne Vorbereitung. Schreiben Sie uns kurz, wer Sie sind und was Sie heute für Ankauf, Bestand und Verkauf nutzen. Sie erhalten Terminvorschläge.</p>
       </div>
     </div>
     <div data-block="Demo.Karte" style="order: var(--demo-o-card); min-width: 0; background: var(--c-accent); border: 0; border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: var(--demo-card-pad);">
@@ -79,21 +79,24 @@
           <p style="font-size: var(--fs-text); line-height: var(--lh-body); color: var(--c-on-dark); margin: var(--sp-16) 0 0;">Wir melden uns in Kürze mit Terminvorschlägen.</p>
         </sc-if>
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
-          <h3 style="margin: 0 0 var(--sp-24); color: var(--c-on-dark);">Demo anfragen</h3>
+          <h3 style="margin: 0 0 var(--sp-8); color: var(--c-on-dark);">Demo anfragen</h3><p style="font-size: var(--fs-tag); color: var(--c-on-dark-2); margin: 0 0 var(--sp-24);">Mit * markierte Felder sind Pflichtfelder.</p>
+          <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
+            <p role="alert" style="font-size: var(--fs-small); color: var(--c-error-on-dark); margin: 0 0 var(--sp-24);">Das hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie an <a href="{{ mailto }}" style="color: var(--c-error-on-dark); text-decoration: underline;">{{ contactEmail }}</a>.</p>
+          </sc-if>
           <form id="demo-form" sc-camel-no-validate="{{ true }}" ref="{{ formRef }}" sc-camel-on-submit="{{ submit }}" style="position: relative; margin: 0;">
             <div style="display: grid; grid-template-columns: var(--demo-form-cols); gap: var(--sp-16);">
                 <label style="display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0;">
-                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Name</span>
+                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Name<span aria-hidden="true" style="color: var(--c-on-dark);"> *</span></span>
                   <input type="text" name="name" autocomplete="name" required="{{ true }}" aria-invalid="{{ inv_name }}" aria-describedby="err-name" style="height: 52px; box-sizing: border-box; width: 100%; padding: 0 var(--sp-16); border: 1px solid {{ bd_name }}; border-radius: var(--r-sm); background: color-mix(in srgb, var(--c-on-dark) 8%, transparent); font-family: var(--font-sans); font-size: var(--fs-small); color: var(--c-on-dark);" style-focus-visible="outline: 2px solid var(--c-on-dark); outline-offset: 2px;">
                   <sc-if value="{{ e_name }}" hint-placeholder-val="{{ false }}"><span id="err-name" style="font-size: var(--fs-small); color: var(--c-error-on-dark);">{{ e_name }}</span></sc-if>
                 </label>
                 <label style="display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0;">
-                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">E-Mail</span>
+                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">E-Mail<span aria-hidden="true" style="color: var(--c-on-dark);"> *</span></span>
                   <input type="email" name="email" autocomplete="email" required="{{ true }}" aria-invalid="{{ inv_email }}" aria-describedby="err-email" style="height: 52px; box-sizing: border-box; width: 100%; padding: 0 var(--sp-16); border: 1px solid {{ bd_email }}; border-radius: var(--r-sm); background: color-mix(in srgb, var(--c-on-dark) 8%, transparent); font-family: var(--font-sans); font-size: var(--fs-small); color: var(--c-on-dark);" style-focus-visible="outline: 2px solid var(--c-on-dark); outline-offset: 2px;">
                   <sc-if value="{{ e_email }}" hint-placeholder-val="{{ false }}"><span id="err-email" style="font-size: var(--fs-small); color: var(--c-error-on-dark);">{{ e_email }}</span></sc-if>
                 </label>
                 <label style="display: flex; flex-direction: column; gap: var(--sp-8); min-width: 0;">
-                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Unternehmen</span>
+                  <span style="font-size: var(--fs-small); color: var(--c-on-dark-2);">Unternehmen<span aria-hidden="true" style="color: var(--c-on-dark);"> *</span></span>
                   <input type="text" name="company" autocomplete="organization" required="{{ true }}" aria-invalid="{{ inv_company }}" aria-describedby="err-company" style="height: 52px; box-sizing: border-box; width: 100%; padding: 0 var(--sp-16); border: 1px solid {{ bd_company }}; border-radius: var(--r-sm); background: color-mix(in srgb, var(--c-on-dark) 8%, transparent); font-family: var(--font-sans); font-size: var(--fs-small); color: var(--c-on-dark);" style-focus-visible="outline: 2px solid var(--c-on-dark); outline-offset: 2px;">
                   <sc-if value="{{ e_company }}" hint-placeholder-val="{{ false }}"><span id="err-company" style="font-size: var(--fs-small); color: var(--c-error-on-dark);">{{ e_company }}</span></sc-if>
                 </label>
@@ -110,9 +113,6 @@
             <div style="display: flex; margin-top: var(--sp-24);">
               <button type="submit" data-block="Button" disabled="{{ sending }}" style="width: var(--demo-btn-w); text-align: center; background: var(--c-on-dark); color: var(--c-accent); border: 1px solid var(--c-on-dark); border-radius: var(--r-pill); font-family: var(--font-sans); font-size: var(--fs-small); font-weight: var(--fw-bold); white-space: nowrap; cursor: pointer; transition: background var(--t-fade); padding: var(--sp-8) var(--sp-24); opacity: {{ btnOpacity }};" style-hover="background: color-mix(in srgb, var(--c-bg) 92%, var(--c-ink));" style-focus-visible="outline: 2px solid var(--c-on-dark); outline-offset: 2px;">{{ btnLabel }}</button>
             </div>
-            <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
-              <p role="alert" style="font-size: var(--fs-small); color: var(--c-error-on-dark); margin: var(--sp-16) 0 0;">Das hat nicht geklappt. Bitte versuchen Sie es erneut oder schreiben Sie an <a href="{{ mailto }}" style="color: var(--c-error-on-dark); text-decoration: underline;">{{ contactEmail }}</a>.</p>
-            </sc-if>
             <p style="font-size: var(--fs-small); line-height: var(--lh-body); color: var(--c-on-dark-2); margin: var(--sp-16) 0 0; text-wrap: pretty;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung der Anfrage zu. Details in der <a href="/datenschutz" style="color: var(--c-on-dark); text-decoration: underline;">Datenschutzerklärung</a>.</p>
           </form>
         </sc-if>
