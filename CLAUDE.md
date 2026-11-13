@@ -25,6 +25,7 @@ Der Übertrag aus Claude Design ist abgeschlossen, das Repository ist die einzig
 - Pfade immer absolut ab Wurzel: `/assets/…`, `/styles.css`, Links als `/demo`, `/impressum`, `/datenschutz`, `/#abschnitt`, ohne abschließenden Schrägstrich und ohne `.html`.
 - Keine externen Ressourcen einbinden (Google Fonts, CDNs, Tracking). Alles wird von der eigenen Domain geladen. Kommt doch ein Drittanbieter hinzu, muss die Datenschutzerklärung angepasst werden.
 - Das Copyright-Jahr im Footer setzt `renderVals()` automatisch (`copyright`). Nicht von Hand eintragen.
+- Die Texte der fünf Ablauf-Stationen stehen zweimal auf der Startseite: in `STATIONS` im Seiten-Script (für die Darstellung) und im `<noscript>`-Block direkt nach `</x-dc>` (für Suchmaschinen und KI-Crawler ohne JavaScript). Bei jeder Änderung an Namen, Texten oder Chips beide Stellen gleich anpassen, in `index.html` und `en/index.html`.
 - Jede Seite bleibt unter 300 KB.
 - Navigation und Footer sind innerhalb einer Sprache auf allen vier Seiten identisch. Eine Änderung dort in allen acht Dateien gleich vornehmen.
 - Nach Änderungen alle acht Seiten bei 1440 px und 390 px Breite ansehen, lokal mit `vercel dev`.
