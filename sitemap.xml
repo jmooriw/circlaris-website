@@ -57,4 +57,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/datenschutz"/>
   </url>
+  <url>
+    <loc>https://circlaris.com/fakten</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/fakten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/facts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/fakten"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/en/facts</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/fakten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/facts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/fakten"/>
+  </url>
 </urlset>

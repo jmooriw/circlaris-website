@@ -27,14 +27,14 @@ Der Übertrag aus Claude Design ist abgeschlossen, das Repository ist die einzig
 - Das Copyright-Jahr im Footer setzt `renderVals()` automatisch (`copyright`). Nicht von Hand eintragen.
 - Die Texte der fünf Ablauf-Stationen stehen zweimal auf der Startseite: in `STATIONS` im Seiten-Script (für die Darstellung) und im `<noscript>`-Block direkt nach `</x-dc>` (für Suchmaschinen und KI-Crawler ohne JavaScript). Bei jeder Änderung an Namen, Texten oder Chips beide Stellen gleich anpassen, in `index.html` und `en/index.html`.
 - Jede Seite bleibt unter 300 KB.
-- Navigation und Footer sind innerhalb einer Sprache auf allen vier Seiten identisch. Eine Änderung dort in allen acht Dateien gleich vornehmen.
-- Nach Änderungen alle acht Seiten bei 1440 px und 390 px Breite ansehen, lokal mit `vercel dev`.
+- Navigation und Footer sind innerhalb einer Sprache auf allen fünf Seiten identisch. Eine Änderung dort in allen zehn Dateien gleich vornehmen.
+- Nach Änderungen alle zehn Seiten bei 1440 px und 390 px Breite ansehen, lokal mit `vercel dev`.
 - Das Demo-Formular sendet an `/api/demo`. Feldnamen (`name`, `email`, `company`, `phone`, `current`, `website`) in Formular und Funktion nur gemeinsam ändern.
 
 ## Sprachen
 
 - Jede Textänderung wird in beiden Sprachen gemacht, auf der deutschen und der englischen Seite.
-- `en/` spiegelt die Struktur eins zu eins: `en/index.html` (`/en`), `en/demo/index.html` (`/en/demo`), `en/imprint/index.html` (`/en/imprint`), `en/privacy/index.html` (`/en/privacy`), mit identischem Markup, identischen Inline-Styles, Section-IDs und `data-block`-Attributen. Interne Links auf englischen Seiten zeigen auf die englischen Seiten; Sprachschalter im Header und `hreflang`-Links im `<head>` gibt es auf allen acht Seiten. `styleguide.html` bleibt deutsch.
+- `en/` spiegelt die Struktur eins zu eins: `en/index.html` (`/en`), `en/demo/index.html` (`/en/demo`), `en/imprint/index.html` (`/en/imprint`), `en/privacy/index.html` (`/en/privacy`), `en/facts/index.html` (`/en/facts`, Gegenstück zu `fakten/index.html`), mit identischem Markup, identischen Inline-Styles, Section-IDs und `data-block`-Attributen. Interne Links auf englischen Seiten zeigen auf die englischen Seiten; Sprachschalter im Header und `hreflang`-Links im `<head>` gibt es auf allen zehn Seiten. `styleguide.html` bleibt deutsch.
 - Englische Texte in britischem Englisch, sachlich, ohne Umgangssprache und ohne Ausrufezeichen, nach dem folgenden Glossar. Beträge als €4,200, Daten als 15 Sep.
 
 Glossar Deutsch → Englisch:
@@ -105,3 +105,11 @@ Navigation: Ablauf = How it works, Vorteile = Benefits, Kunden = Customers, Wech
 - Verifizierte Versanddomain in MailerSend ist `circlaris.de`; `DEMO_FROM` muss eine Adresse dieser Domain sein. Ziel der Anfragen ist `hello@circlaris.com` (`DEMO_TO`). Antworten gehen per `reply_to` direkt an die anfragende Person.
 - Der MailerSend-Token gehört niemals ins Repository, auch nicht in `.env.example`, README oder Kommentare. `.env` und `.env.local` sind in `.gitignore`.
 - Ein Wechsel des Mail-Anbieters erfordert eine Anpassung der Datenschutzerklärung (Abschnitt 2.2).
+
+## Fakten-Seite (Grounding Page)
+
+- `fakten/index.html` (`/fakten`) und `en/facts/index.html` (`/en/facts`) beschreiben Circlaris nach dem Grounding Page Standard (groundingpage.com/spec). Sie sind der Referenzanker für die beiden Entitäten: die Software Circlaris (`https://circlaris.com/fakten#circlaris`) und den Betreiber CHH Ventures GmbH (`https://circlaris.com/fakten#chh-ventures`). Diese `@id` gelten auf allen Seiten und in beiden Sprachen und werden nie geändert.
+- Alles, was im JSON-LD der Fakten-Seite steht, muss sichtbar auf der Seite stehen, und umgekehrt dürfen sich Text und JSON-LD nicht widersprechen. Jede Faktenänderung in beiden Sprachen und im JSON-LD gleich vornehmen und `dateModified` sowie „Zuletzt aktualisiert“ anpassen.
+- Prüfvermerk („Fakten geprüft von … · Zuletzt durch einen Menschen geprüft: …“) sowie `reviewedBy` und `lastReviewed` nur nach einer dokumentierten Prüfung durch einen Menschen setzen, nie automatisch. Ablauf und Protokoll: `docs/fakten-pruefprotokoll.md`. Prüfung alle drei bis sechs Monate, spätestens nach zwölf Monaten, sofort bei geänderten Fakten.
+- `sameAs` nur für offizielle Profile, die genau Circlaris oder die CHH Ventures GmbH identifizieren, und nur, wenn der Link auch sichtbar auf der Seite steht.
+- `/facts` und `/facts.html` (alte Adresse) leiten per 301 auf `/fakten` weiter (`vercel.json`).
