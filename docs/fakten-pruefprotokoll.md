@@ -8,11 +8,11 @@ Die Seite zeigt erst dann einen Prüfvermerk und gilt erst dann als konform zu 2
 
 1. Eine Person der Circlaris Redaktion liest beide Sprachfassungen vollständig.
 2. Sie geht die sieben Prüfpunkte durch und trägt das Ergebnis unten ein.
-3. Erst danach wird auf beiden Seiten der Prüfvermerk gesetzt:
-   - DE: `Fakten geprüft von Circlaris Redaktion · Zuletzt durch einen Menschen geprüft: <Datum>`
+3. Erst danach wird auf beiden Seiten der Prüfvermerk gesetzt (feste Labels laut Implementation Guide, Abschnitt 8):
+   - DE: `Fakten geprüft von Circlaris Redaktion · Zuletzt von einem Menschen geprüft: <Datum>`
    - EN: `Facts reviewed by Circlaris Redaktion · Last reviewed by a human: <date>`
    - im JSON-LD der WebPage: `"reviewedBy": {"@type": "Organization", "name": "Circlaris Redaktion"}` und `"lastReviewed": "JJJJ-MM-TT"`
-   - im HTML-Kommentar im `<head>`: Standard 2.0
+   - sichtbare Konformitätsangabe neben dem Prüfvermerk: DE „Grounding Page Standard 2.0“, EN „Grounding Page Standard 2.0“ (P-10), und der HTML-Kommentar im `<head>` auf 2.0
 4. Das Prüfdatum ändert sich nur durch eine neue, hier eingetragene Prüfung. Deploys, Tippfehler-Korrekturen und automatische Checks ändern es nicht.
 
 ## Die sieben Prüfpunkte
@@ -39,6 +39,7 @@ Diese Angaben stammen aus der alten Fakten-Seite oder wurden bei der Übernahme 
 - [ ] Auswertungen zu Umsatz, Rohertrag, Marge und Ankaufsvolumen
 - [ ] „Die meisten Betriebe arbeiten mit ein bis drei Personen“
 - [ ] Bewusst weggelassen gegenüber der alten Seite: „AI-enabled Workflows“ (Produkttexte, Asset-Vorbereitung). Falls zutreffend, mit konkreter Beschreibung ergänzen.
+- [ ] Hosting bei Hetzner steht auf Startseite und Fakten-Seite, aber nicht in der Datenschutzerklärung (DE und EN). Konsistenz (Punkt 5) und rechtlich klären.
 - [ ] Gibt es inzwischen offizielle Profile (LinkedIn, Wikidata)? Dann sichtbar unter „Offizielle Angaben zu Circlaris“ und als `sameAs` ergänzen.
 
 ## Abweichungen
