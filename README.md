@@ -93,3 +93,13 @@ curl -i -X POST http://localhost:3000/api/demo -H 'Content-Type: application/jso
 ## Deployment
 
 Repository in Vercel importieren. *Framework Preset* „Other“, kein Build Command, Output Directory leer lassen (Projektwurzel). Danach die drei Umgebungsvariablen setzen und die Domain `circlaris.com` verbinden.
+
+## IndexNow (Bing, Yandex, Naver)
+
+Die Schlüsseldatei `2e414f018808aa0fd31135938af42cf2.txt` liegt in der Projektwurzel und muss unter `https://circlaris.com/2e414f018808aa0fd31135938af42cf2.txt` erreichbar sein. Der Schlüssel ist öffentlich und kein Geheimnis. Nach dem Umzug der Domain und nach größeren Änderungen die geänderten Seiten melden:
+
+```bash
+curl -i -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d '{"host":"circlaris.com","key":"2e414f018808aa0fd31135938af42cf2","keyLocation":"https://circlaris.com/2e414f018808aa0fd31135938af42cf2.txt","urlList":["https://circlaris.com/","https://circlaris.com/en","https://circlaris.com/demo","https://circlaris.com/en/demo","https://circlaris.com/impressum","https://circlaris.com/en/imprint","https://circlaris.com/datenschutz","https://circlaris.com/en/privacy"]}'
+```
+
+Erst senden, wenn circlaris.com auf dieses Projekt zeigt, sonst lehnt IndexNow den Schlüssel ab.
