@@ -24,6 +24,87 @@
 <link rel="icon" type="image/svg+xml" href="/assets/logo-mark.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://circlaris.com/#organization",
+      "name": "Circlaris",
+      "legalName": "CHH Ventures GmbH",
+      "url": "https://circlaris.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://circlaris.com/assets/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
+      "email": "hello@circlaris.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dieselstr. 13",
+        "postalCode": "50859",
+        "addressLocality": "Köln",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "hello@circlaris.com",
+        "availableLanguage": [
+          "de",
+          "en"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://circlaris.com/#website",
+      "url": "https://circlaris.com/",
+      "name": "Circlaris",
+      "publisher": {
+        "@id": "https://circlaris.com/#organization"
+      },
+      "inLanguage": [
+        "de",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://circlaris.com/#webpage",
+      "url": "https://circlaris.com/",
+      "name": "Circlaris | Software für Uhren-, Schmuck- und Goldhändler",
+      "description": "Circlaris ist die Software für Händler von gebrauchten Luxusuhren, Schmuck und Gold: Ankauf, Service, Inventar, Vermarktung und Verkauf in einem System.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://circlaris.com/#website"
+      },
+      "about": {
+        "@id": "https://circlaris.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://circlaris.com/#software"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://circlaris.com/#software",
+      "name": "Circlaris",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Circlaris ist die Software für Händler von gebrauchten Luxusuhren, Schmuck und Gold: Ankauf, Service, Inventar, Vermarktung und Verkauf in einem System.",
+      "url": "https://circlaris.com/",
+      "inLanguage": "de",
+      "publisher": {
+        "@id": "https://circlaris.com/#organization"
+      },
+      "image": "https://circlaris.com/assets/og-circlaris-de.jpg"
+    }
+  ]
+}
+</script>
 <script src="/assets/js/react.production.min.js"></script>
 <script src="/assets/js/react-dom.production.min.js"></script>
 <script src="/assets/js/dc-runtime.js"></script>
