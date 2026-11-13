@@ -1,0 +1,9 @@
+# circlaris.com
+# Alle Suchmaschinen und KI-Crawler dürfen die öffentlichen Seiten lesen.
+# Der Styleguide trägt selbst noindex und wird deshalb nicht gesperrt,
+# damit Crawler das noindex sehen können.
+
+User-agent: *
+Disallow: /api/
+
+Sitemap: https://circlaris.com/sitemap.xml

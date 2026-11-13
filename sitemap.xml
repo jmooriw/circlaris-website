@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://circlaris.com/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/en</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/demo</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/demo"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/en/demo</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/demo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/demo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/demo"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/impressum</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/impressum"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/en/imprint</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/imprint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/impressum"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/datenschutz</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/datenschutz"/>
+  </url>
+  <url>
+    <loc>https://circlaris.com/en/privacy</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://circlaris.com/datenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://circlaris.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://circlaris.com/datenschutz"/>
+  </url>
+</urlset>
