@@ -39,6 +39,7 @@ Diese Angaben stammen aus der alten Fakten-Seite oder wurden bei der Übernahme 
 - [ ] Auswertungen zu Umsatz, Rohertrag, Marge und Ankaufsvolumen
 - [ ] „Die meisten Betriebe arbeiten mit ein bis drei Personen“
 - [ ] Bewusst weggelassen gegenüber der alten Seite: „AI-enabled Workflows“ (Produkttexte, Asset-Vorbereitung). Falls zutreffend, mit konkreter Beschreibung ergänzen.
+- [ ] Glossar „Begriffe rund um Circlaris“: Erklärungen fachlich richtig, besonders Differenzbesteuerung, Kommission, Rohertrag und Marge
 - [ ] Hosting bei Hetzner steht auf Startseite und Fakten-Seite, aber nicht in der Datenschutzerklärung (DE und EN). Konsistenz (Punkt 5) und rechtlich klären.
 - [ ] Gibt es inzwischen offizielle Profile (LinkedIn, Wikidata)? Dann sichtbar unter „Offizielle Angaben zu Circlaris“ und als `sameAs` ergänzen.
 
